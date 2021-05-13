@@ -13,7 +13,17 @@ session_start();
 				<img src="logo1.png">
 			</div>
 
-			<div id="info">   Particulier      |     Profesionnel    |    I-car en France </div>
+			<div id="info">  
+				<?php
+				$t = date("H");
+
+				if ($t < "20") {
+				  echo "<strong>Bonjour, bienvenue sur notre site !</strong>";
+				} else {
+				  echo "<strong>Bonsoir, bienvenue sur notre site !</strong>";
+				}
+				?>  
+			</div>
  
 			<div class="connexion">
 			<form method="POST" action="Connexion.php" >
