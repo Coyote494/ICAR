@@ -1,0 +1,176 @@
+#conteneur{
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	background-color: #fefee2;
+	justify-content: space-between;
+}
+
+#conteneur > div{
+	 margin: 10px;
+	 padding: 20px;
+ }
+
+#header{
+	background-color: #fefee2;
+		
+}
+
+#header img{
+	margin-left: 10px;
+	height: 100px;
+}
+
+
+#info{
+	font-size:25px;
+	text-align: center;
+	width: 20%;
+	background-color: #fefee2;
+
+}
+
+
+.button {
+	background-color: #fefee2;
+	color: #2e7d32; 
+	border-radius:12px;
+	border: 2px solid #2e7d32;
+	font-size:16px;
+	padding: 15px;
+
+}
+
+
+.button:hover {
+	background-color: #2e7d32;
+	color:#fefee2;
+	border-radius:12px;
+	border: 2px solid #fefee2;
+	font-size:16px;
+	padding: 15px;
+}
+
+.i {
+  display:inline-block;
+  position:relative;
+}
+.i:after {
+  content:attr(title);
+  display:none;
+  position:absolute;
+  left:50%;
+  bottom:100%;
+  margin-bottom:5px;
+  width:20px;
+  background:orange;
+  padding:10px;
+  color:#000;
+}
+.i:hover:after {
+  display:block;
+}
+
+
+.profil{
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	background-color: white;
+	justify-content: space-around;
+}
+
+.columns {
+  float: left;
+  width: 33.3%;
+  padding: 8px;
+}
+
+.price {
+  list-style-type: none;
+  border: 1px solid #eee;
+  margin: 0;
+  padding: 0;
+}
+
+
+.price .header {
+  background-color: #111;
+  color: white;
+  font-size: 25px;
+}
+
+.price li {
+  border-bottom: 1px solid #eee;
+  padding: 12px;
+  text-align: center;
+}
+
+.price .grey {
+  background-color: #eee;
+  font-size: 20px;
+}
+
+#milieu{
+	border: 1px solid #2e7d32;
+	padding: 200px;
+	text-align: center;
+	background-color: #fefee2;
+}
+
+#bas{
+	border: 1px solid red;
+	padding: 100px;
+	text-align: center;
+	background-color: white;
+}
+
+#dallas{
+	border: 1px solid red;
+	padding: 100px;
+}
+
+.rating a {
+   float: right;/*glisser de droite à gauche donc invese le sens qui été par défaut*/
+   color: #aaa;
+   text-decoration: none;
+   font-size: 3em;
+   transition: color .4s;
+}
+.rating a:hover,/*changemant de couleur en passant sur l'étoile*/
+.rating a:focus,
+.rating a:hover ~ a,
+.rating a:focus ~ a {
+   color: orange;
+   cursor: pointer;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.contact {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
