@@ -51,10 +51,15 @@
 	padding: 15px;
 }
 
+#inf img{
+	height: 50px;
+}
+
 .i {
   display:inline-block;
   position:relative;
 }
+
 .i:after {
   content:attr(title);
   display:none;
@@ -62,15 +67,15 @@
   left:50%;
   bottom:100%;
   margin-bottom:5px;
-  width:20px;
+  min-width:200px;
   background:orange;
   padding:10px;
   color:#000;
 }
+
 .i:hover:after {
   display:block;
 }
-
 
 .profil{
 	display: flex;
@@ -89,6 +94,7 @@
 .price {
   list-style-type: none;
   border: 1px solid #eee;
+  border-radius:12px; /*marche pas*/
   margin: 0;
   padding: 0;
 }
@@ -115,12 +121,23 @@
 	border: 1px solid #2e7d32;
 	padding: 200px;
 	text-align: center;
-	background-color: #fefee2;
+	background-color: white;
+	color:red;
+	background-image: url("https://www.danstapub.com/wp-content/uploads/2015/10/dans-ta-pub-mercedes-uncrashable-car-kids-toy.png");
 }
+
+#choix{
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	background-color: white;
+	justify-content: space-around;
+}
+
 
 #bas{
 	border: 1px solid red;
-	padding: 100px;
+	padding: 50px;
 	text-align: center;
 	background-color: white;
 }
