@@ -22,55 +22,36 @@ session_start();
 				} else {
 				  echo "<strong>Bonsoir, bienvenue sur notre site !</strong>";
 				}
-				?>  
+				?>
+				</br> Avec I-car, ce n'est plus le bazar</br>
+				 Ici, accédez facilement à votre espace client.
+
 			</div>
  
 			<div class="connexion">
 			<form method="POST" action="Connexion.php" >
-				<input type="submit" name="OUT" value="Espace client" class="button">
+			<button class="button">Espace client</button>
 			</form>
 			</div>
-			<div id="inf">
+
+			<div class="inf">
 				<img src="inf.png">
+				<span class="inftext">texte</span>
 			</div>	
 		</div>
-		<a class="i" href="#" title="Voici quelques infos">i</a>
-	<h2 style="text-align:center">Avec I-car, ce n'est plus le bazar</h2>
-<p style="text-align:center">Ici, accédez facilement à votre espace client.</p>
+	<div class="covid-rtl">
+        <h3>ATTENTION : En raison de la situation sanitaire actuelle, nous privilégions les demandes et retours par mail.</h3>
+        <div><img src="img/virus.png"></div>
+    </div>
 
-<div class="profil">
-	<div class="columns">
-	  <ul class="price">
-	    <li class="header">Profil 1</li>
-	    <li class="grey">Force de l'ordre</li>
-	    <li class="grey"><a class="button">Mon espace</a></li>
-	  </ul>
-	</div>
-
-	<div class="columns">
-	  <ul class="price">
-	    <li class="header" style="background-color:#2e7d32">Profil 2</li>
-	    <li class="grey">Assuré</li>
-	    <li class="grey"><a class="button">Mon espace</a></li>
-	  </ul>
-	</div>
-
-	<div class="columns">
-	  <ul class="price">
-	    <li class="header">Profil 3</li>
-	    <li class="grey">Assureur</li>
-	    <li class="grey"><a class="button">Mon espace</a></li>
-	  </ul>
-	</div>
+<div class="reseau">
+	<div><a href="https://www.facebook.com"><img src="img/facebook.png"> </a></div>
+	<div><a href="https://www.instagram.com"><img src="img/insta.jpeg"></a></div>
+	<div><a href="https://www.linkedin.com"><img src="img/ld.png"></a></div>
+	<div><a href="https://twitter.com"><img src="img/twitter.png"></a></div>
 </div>
-	<div id="milieu">Les services de la plateforme :</br>
-		Declaration de cession de véhicule</br>
-		Declaration d'un sinistre</br>
-		Descriptif du véhicule</br>
-		Descriptif du conducteur</br>
-		Descriptif d'un contrat en cours/futur</br>
-		Constat à l'amiable</br>
-		Carte verte</br>
+	<div class="milieu">
+		<img src="img/fond.png"> </a>
 
 	</div>
 	<div id="dallas">
@@ -84,20 +65,21 @@ session_start();
    --><a href="#1" title="Donner 1 étoile">★</a>
 		</div>
 	</div>
-	<div id="bas">Nous contacter</br>
-		Nos Réseaux Sociaux</br>
-		Notre téléphone</br>
-		Notre email</br> <img src="mail.png">
-		Notre adresse</br>
+	<div class="bas">
+    <h1>Nous contacter</h1>
+	 <div class="contact">
+		<h1>Nos contacts</h1>
+		<p><img src="img/tel.png" hspace="5"></p> <p>Notre téléphone : 06 40 90 54 32</p>
+		<p><img src="img/mail.png" hspace="5" ></p> <p>Notre email : Icar.assu@gmail.com</p> 
+		<p><img src="img/maison.png" hspace="5"></p> <p>Notre adresse : 2 avenue Lafayette 33000 Bordeaux</p>
 	</div>
+
+
+	<div class="formulaire">
 	<h3>Formulaire de contact</h3>
+ 	<p>Nom <input type="text" name="id"  placeholder="Votre nom" required> </p> 
+	<p>Prénom<input type="text" name="id"  placeholder="Votre prénom" required> </p> 
 
-<div class="contact">
-    <label for="fname">Nom</label>
-    <input type="text" id="fname" name="firstname" placeholder="Votre nom">
-
-    <label for="lname">Prénom</label>
-    <input type="text" id="lname" name="lastname" placeholder="Votre prénom">
 
     <label for="country">Pays</label>
     <select id="country" name="country">
@@ -110,16 +92,13 @@ session_start();
     </select>
 
     <label for="subject">Commentaire</label>
-    <textarea id="subject" name="subject" placeholder="Ecrivez nous.." style="height:200px"></textarea>
+    <input type="text" name="subject" placeholder="Ecrivez nous..">
 
     <input type="submit" value="Envoyer">
 </div>
+</div>
+
 
 </body>
-</html>
-
-
-
-	</body>
 </html>
 
