@@ -2,7 +2,7 @@
 	display: flex;
 	width: 100%;
 	flex-direction: row;
-	background-color: #fefee2;
+	background-color: #fafafa;
 	justify-content: space-between;
 }
 
@@ -12,7 +12,7 @@
  }
 
 #header{
-	background-color: #fefee2;
+	background-color: #fafafa;
 		
 }
 
@@ -24,15 +24,15 @@
 
 #info{
 	font-size:25px;
-	text-align: center;
-	width: 20%;
-	background-color: #fefee2;
+	width: 50%;
+	background-color: transparent;
 
 }
 
 
 .button {
-	background-color: #fefee2;
+	transition-duration: 0.2s;
+	background-color: #fafafa;
 	color: #2e7d32; 
 	border-radius:12px;
 	border: 2px solid #2e7d32;
@@ -44,52 +44,44 @@
 
 .button:hover {
 	background-color: #2e7d32;
-	color:#fefee2;
+	color:#fafafa;
 	border-radius:12px;
-	border: 2px solid #fefee2;
+	border: 2px solid #fafafa;
 	font-size:16px;
 	padding: 15px;
 }
 
-#inf img{
+.inf img{
 	height: 50px;
 }
 
-.i {
-  display:inline-block;
-  position:relative;
+.inf span {
+    visibility: hidden;
+}
+ 
+.inf img:hover + span {
+    visibility: visible;
 }
 
-.i:after {
-  content:attr(title);
-  display:none;
-  position:absolute;
-  left:50%;
-  bottom:100%;
-  margin-bottom:5px;
-  min-width:200px;
-  background:orange;
-  padding:10px;
-  color:#000;
-}
-
-.i:hover:after {
-  display:block;
-}
-
-.profil{
+.reseau{
 	display: flex;
-	width: 100%;
+	justify-content: center;
 	flex-direction: row;
-	background-color: white;
-	justify-content: space-around;
+}
+.reseau:before, 
+
+.reseau:after { 
+content: ""; 
+flex: 1 1; 
+border-bottom: 1px solid #000; 
+margin: auto; 
+} 
+.reseau img{
+	width: 30px;
+	padding: 3px;
 }
 
-.columns {
-  float: left;
-  width: 33.3%;
-  padding: 8px;
-}
+
 
 .price {
   list-style-type: none;
@@ -117,15 +109,21 @@
   font-size: 20px;
 }
 
-#milieu{
+.milieu{
 	border: 1px solid #2e7d32;
 	padding: 200px;
 	text-align: center;
 	background-color: white;
 	color:red;
-	background-image: url("https://www.danstapub.com/wp-content/uploads/2015/10/dans-ta-pub-mercedes-uncrashable-car-kids-toy.png");
 }
 
+.milieu img{
+	display: flex;
+	justify-content: center;
+	width:1200px;
+	border-radius: 30px
+
+}
 #choix{
 	display: flex;
 	width: 100%;
@@ -135,12 +133,41 @@
 }
 
 
-#bas{
+.bas {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 100%;
 	border: 1px solid red;
 	padding: 50px;
-	text-align: center;
-	background-color: white;
 }
+.bas h1{
+	text-align: center
+}
+
+ .contact  p img{
+ 	vertical-align: middle;
+ 	width: 20px;
+    display: flex;
+    flex-direction: column;
+    float: left;
+
+ }
+
+.contact {
+  border-radius: 5px;
+  padding: 10px;
+  background-color: pink;
+
+}
+
+.formulaire{
+ padding-left: 5px;
+}
+
+
+
+
 
 #dallas{
 	border: 1px solid red;
@@ -186,8 +213,46 @@ input[type=submit]:hover {
   background-color: #45a049;
 }
 
-.contact {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
+
+.covid-rtl{
+    text-align: center;
+    background-color: white;
+    color:red;
+    overflow: hidden; /* important */
+ }
+
+
+.covid-rtl img{​​​​​​​
+    width: 150px;
+    opacity: 0.7; 
+
+
 }
+
+
+.covid-rtl > div {
+  display: inline-block; /* important */
+  white-space: nowrap; /* important */
+  animation: defilement-rtl 15s infinite linear; /* défilement */
+  cursor: pointer;
+  padding: 10px 2em 10px 100%;
+}
+
+
+
+.covid-rtl > div:first-letter {
+  font-weight: 700;
+  color: #F00;
+}
+
+@keyframes defilement-rtl {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+  100% {
+    -webkit-transform: translate(-100%);
+    transform: translate(-100%);
+  }
+}
+
