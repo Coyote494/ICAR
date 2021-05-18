@@ -9,6 +9,7 @@
 	</head>
 	<body>
         <?php
+			$path = "/icar/client/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/Documents/";
             //on vérifie s'il y a des erreurs d'upload
 			if ($_FILES['fileToUpload']['error']  > 0 ) {
 				header('Location: ../declarer_vente.php?upload=echec');
@@ -20,7 +21,7 @@
                 $n = count($extension);
 			  	$res = move_uploaded_file( 
 			        $_FILES['fileToUpload']['tmp_name'], 
-			        "../cession.".$extension[$n-1]);
+			        $path."cession.".$extension[$n-1]);
 			  	if($res){
                     header('Location: ../declarer_vente.php?upload=sucess');
 			  		exit();
