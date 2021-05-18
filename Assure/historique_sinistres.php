@@ -16,7 +16,23 @@
 
         <div>Historique des sinistres</div>
 		<?php
-			$path = "/client/".$_SESSION["assurance"].$_SESSION["nom"][0]
+			$path = "../client/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/Sinistres";
+			function ScanDirectory($Directory){
+
+				$MyDirectory = opendir($Directory) or die('Erreur');
+			 	while(false != ($Entry = readdir($MyDirectory))) {
+			 		if(is_dir($Directory.'/'.$Entry)&& $Entry != '.' && $Entry != '..') {
+			      		echo '<div>'.$Entry;
+			   			ScanDirectory($Directory.'/'.$Entry);
+			            echo '</div>';
+			  		}
+			  		else if($Entry != '.' && $Entry != '..'){
+						echo '<li><a href ='.$Directory.'/'.$Entry.' target="_blank">'.$Entry.'</a></li>';
+			   	    }
+			 	}
+			  	closedir($MyDirectory);
+			}
+			ScanDirectory($path);
 		?>
 
 

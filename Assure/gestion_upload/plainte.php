@@ -14,13 +14,22 @@
 				header('Location: ../declarer_sinistre.php?upload=echec');
 			  	exit();
 			} else{
+				$path = "/icar/client/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/Sinistres/";
+				if(!isset($_SESSION["sinistre"])){
+					$i = 1;
+					while(file_exists($path."Sinistre_".$1)){
+						$i++;
+					}
+					$_SESSION["sinistre"] = $i;
+				}
+				$path = $path."Sinistre_".$_SESSION["sinistre"];
                 //on déplace le fichier uploadé des fichiers temporaires dans son dossier de stockage
                 // et on vérifie que l'opéation s'est bien passé
 				$extension = explode('.', $_FILES['fileToUpload']['name']) ; //on enregistre le fichier sous la bonne extension
                 $n = count($extension);
 			  	$res = move_uploaded_file( 
 			        $_FILES['fileToUpload']['tmp_name'], 
-			        "../plainte.".$extension[$n-1]);
+			        $path."/plainte.".$extension[$n-1]);
 			  	if($res){
                     header('Location: ../declarer_sinistre.php?upload=sucess');
 			  		exit();

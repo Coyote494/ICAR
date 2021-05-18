@@ -10,7 +10,7 @@ session_start();
 	<body>
 		<div id= "conteneur">
 			<div id="header">
-				<img src="logo1.png">
+				<img src="./img/logo1.png">
 			</div>
 
 			<div id="info">  
@@ -35,7 +35,7 @@ session_start();
 			</div>
 
 			<div class="inf">
-				<img src="inf.png">
+				<img src="./img/inf.png">
 				<span class="inftext">texte</span>
 			</div>	
 		</div>
@@ -45,13 +45,13 @@ session_start();
     </div>
 
 <div class="reseau">
-	<div><a href="https://www.facebook.com"><img src="img/facebook.png"> </a></div>
-	<div><a href="https://www.instagram.com"><img src="img/insta.jpeg"></a></div>
-	<div><a href="https://www.linkedin.com"><img src="img/ld.png"></a></div>
-	<div><a href="https://twitter.com"><img src="img/twitter.png"></a></div>
+	<div><a href="https://www.facebook.com"><img src="./img/facebook.png"> </a></div>
+	<div><a href="https://www.instagram.com"><img src="./img/insta.jpeg"></a></div>
+	<div><a href="https://www.linkedin.com"><img src="./img/ld.png"></a></div>
+	<div><a href="https://twitter.com"><img src="./img/twitter.png"></a></div>
 </div>
 	<div class="milieu">
-		<img src="img/fond.png"> </a>
+		<img src="./img/fond.png"> </a>
 
 	</div>
 	<div id="dallas">
@@ -69,9 +69,9 @@ session_start();
     <h1>Nous contacter</h1>
 	 <div class="contact">
 		<h1>Nos contacts</h1>
-		<p><img src="img/tel.png" hspace="5"></p> <p>Notre téléphone : 06 40 90 54 32</p>
-		<p><img src="img/mail.png" hspace="5" ></p> <p>Notre email : Icar.assu@gmail.com</p> 
-		<p><img src="img/maison.png" hspace="5"></p> <p>Notre adresse : 2 avenue Lafayette 33000 Bordeaux</p>
+		<p><img src="./img/tel.png" hspace="5"></p> <p>Notre téléphone : 06 40 90 54 32</p>
+		<p><img src="./img/mail.png" hspace="5" ></p> <p>Notre email : Icar.assu@gmail.com</p> 
+		<p><img src="./img/maison.png" hspace="5"></p> <p>Notre adresse : 2 avenue Lafayette 33000 Bordeaux</p>
 	</div>
 
 
