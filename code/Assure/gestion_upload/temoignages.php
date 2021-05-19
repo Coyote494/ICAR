@@ -14,13 +14,13 @@
 				header('Location: ../declarer_sinistre.php?upload=echec');
 			  	exit();
 			} else{
-				$path = "/icar/client/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/Sinistres/";
+				$path = "../../../database/client/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/Sinistres/";
 				if(!isset($_SESSION["sinistre"])){
 					$i = 1;
 					while(file_exists($path."Sinistre_".$i)){
 						$i++;
 					}
-					mkdir($path."Sinistre_".$i, 0777, false);
+					mkdir($path."Sinistre_".$i, 0777);
 					$_SESSION["sinistre"] = $i;
 				}
 				$path = $path."Sinistre_".$_SESSION["sinistre"];
@@ -32,7 +32,7 @@
                 $verif = 1;
                 //comme on peut ajouter plusieurs images/témoignages il faut tous les garder en mémoire
                 while($verif){
-                	if(file_exists("../temoignages".$i.".".$extension[$n-1])){
+                	if(file_exists($path."/temoignages".$i.".".$extension[$n-1])){
                 		$i++;
                 	}else{
                 		$verif = 0;

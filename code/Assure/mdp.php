@@ -10,7 +10,7 @@
 	</head>
 	<body>
 		<?php
-            $path = "../client/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/";
+            $path = "../../database/client/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/";
             if (($handle = fopen($path."coordonnees.csv", 'r'))) {
                 $tab = fgetcsv($handle, 1000, ",");
                 if($_POST["old_mdp"] != $tab[3]){

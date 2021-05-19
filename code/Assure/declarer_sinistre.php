@@ -10,7 +10,7 @@
 	<body>
 
 		<!-- bouton de déconnexion -->
-		<form method="POST" action="deconnexion.php">
+		<form method="POST" action="../deconnexion.php">
 		    <input type="submit" name="OUT" value="Déconnexion"/>
 		</form>
 
@@ -28,7 +28,7 @@
 		<div>
 			<!-- formulaire d'upload de la déclaration de sinistre -->
 			<h4>Lettre de déclaration du sinistre</h4>
-			<p>Déclaration de sinistre pré-remplie : <a href="./documents_administratifs/declaration-de-sinistre.pdf">Déclaration_de_sinistre.pdf</a></p>
+			<p>Déclaration de sinistre pré-remplie : <a href="./documents_administratifs/declaration-de-sinistre.pdf" target = "_blank">Déclaration_de_sinistre.pdf</a></p>
 			<form enctype="multipart/form-data" method="post" action="./gestion_upload/lettre.php">
 				<p><input type="file" name="fileToUpload"></p>
 				<p><input type="submit" value="Importer"></p>
@@ -36,12 +36,12 @@
 
 			<!-- formulaire d'upload du constat amiable -->
 			<h4>Ajouter un constat amiable (dans le cas d'un accident)</h4>
-			<p>Voici un formulaire de constat amiable : <a href="./documents_administratifs/constat-amiable-europeen-daccident-automobile.pdf">constat_amiable.pdf</a></p>
+			<p>Voici un formulaire de constat amiable : <a href="./documents_administratifs/constat-amiable-europeen-daccident-automobile.pdf" target = "_blank">constat_amiable.pdf</a></p>
 			<p>Vous pouvez aussi utiliser l'application e-constat disponible sur mobile.</p>
 			
 			<div>
-				<p><a href="https://play.google.com/store/apps/details?id=com.darva.econstat"><img src="img/logo_gplay.png" alt="Logo du playstore"></a></p>
-				<p><a href="https://apps.apple.com/fr/app/e-constat-auto/id929638366"><img src="img/logo_astore.png" alt="Logo de l'apstore"></a></p>
+				<p><a href="https://play.google.com/store/apps/details?id=com.darva.econstat" target = "_blank"><img src="img/logo_gplay.png" alt="Logo du playstore"></a></p>
+				<p><a href="https://apps.apple.com/fr/app/e-constat-auto/id929638366" target = "_blank"><img src="img/logo_astore.png" alt="Logo de l'apstore"></a></p>
 			</div>
 			
 			<form enctype="multipart/form-data" method="post" action="./gestion_upload/constat.php">

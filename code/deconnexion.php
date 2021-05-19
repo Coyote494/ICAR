@@ -10,7 +10,7 @@ session_start();
 		<?php
 			if (isset($_POST["OUT"])){
 				session_destroy();
-				header('Location: connexion.php');
+				header('Location: ./Connexion.php');
 			}
 		?>
 	</body>

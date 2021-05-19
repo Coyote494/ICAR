@@ -23,7 +23,7 @@
 			<h3>Mes données personnelles</h3>
 			<table>
 				<?php
-					$path = "../client/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/";
+					$path = "../../database/client/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/";
 					if (($handle = fopen($path."coordonnees.csv", "r"))) {
 						while (($data = fgetcsv($handle, 1000, ","))) {
 							echo "<tr><td>Civilité</td><td id = 'civilite'>".$data[4]."</td></tr>";
@@ -43,7 +43,7 @@
 			<h3>Mes coordonnées</h3>
 			<table>
 				<?php
-					$path = "../client/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/";
+					$path = "../../database/client/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/";
 					if (($handle = fopen($path."coordonnees.csv", "r"))) {
 						while (($data = fgetcsv($handle, 1000, ","))) {
 							echo "<tr><td>Adresse</td><td>".$data[7].",</br>".$data[8]." ".$data[9]."</td></tr>";
@@ -61,7 +61,7 @@
 			<h3>Mes Informations de Connexion</h3>
 			<table>
 				<?php
-					$path = "../client/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/";
+					$path = "../../database/client/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/";
 					if (($handle = fopen($path."coordonnees.csv", "r"))) {
 						while (($data = fgetcsv($handle, 1000, ","))) {
 							echo "<tr><td>Identifiant</td><td>".$data[2]."</td></tr>";
