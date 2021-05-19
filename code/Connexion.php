@@ -14,14 +14,14 @@
 		<p>Mot de passe : <input type="password" name="mdp" required></p> <!--zone de texte pour que l'utilisateur la remplisse-->
 		<p><input type="submit" value="valider"></p> <!--bouton qui envoie à la page suivante-->
 	</form>
-	<form method="POST" action="connexion.php">
+	<form method="POST" action="./Connexion.php">
 		<input type="submit" name="OUT" value="deconnexion"/> <!--on créé un bouton deconnexion qui renvoie au portail de co -->
 	</form>
 
 	<div>
 		<?php
 			if (isset($_GET["error"])) {
-				echo "Vous vous êtes trompré(e)s";
+				echo "Vous vous êtes trompré(e)";
 			}
 			if (isset($_POST["OUT"])){
 				session_destroy();

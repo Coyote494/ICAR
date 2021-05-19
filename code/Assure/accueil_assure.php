@@ -10,7 +10,7 @@
 	<body>
 
 		<!-- bouton de déconnexion -->
-		<form method="POST" action="deconnexion.php">
+		<form method="POST" action="../deconnexion.php">
 		    <input type="submit" name="OUT" value="Déconnexion"/>
 		</form>
 

@@ -11,9 +11,17 @@
 		<meta charset="utf-8">
 	</head>
 	<body>
-
+		<?php
+			if (isset($_GET["upload"])) {
+				if($_GET["upload"] == "echec"){
+					echo '<script>alert("Echec lors de l\'upload du fichier !");</script>' ;
+				}else{
+					echo '<script>alert("Fichier uploadé avec succès !");</script>' ;
+				}
+			}
+		?>
 		<!-- bouton de déconnexion -->
-		<form method="POST" action="deconnexion.php">
+		<form method="POST" action="../deconnexion.php">
 			<input type="submit" name="OUT" value="Déconnexion"/>
 		</form>
 
@@ -73,6 +81,6 @@
 				?>
 			</table>
 		</div>
-		<script type="text/javascript" src="/icar/Assure/JS/modifier_perso.js"></script>
+		<script type="text/javascript" src="./JS/modifier_perso.js"></script>
 	</body>
 </html>

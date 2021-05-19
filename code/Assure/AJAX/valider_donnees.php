@@ -10,7 +10,7 @@
 	<body>
 
         <?php
-		    $path = "../../client/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/";
+		    $path = "../../../database/client/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/";
 			if (($handle = fopen($path.'/coordonnees.csv', 'r'))) {
 				$tab = fgetcsv($handle, 1000, ",");
                 fclose($handle);
@@ -28,7 +28,7 @@
         <h3>Mes coordonnées</h3>
 		<table>
 			<?php
-				$path = "../../client/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/";
+				$path = "../../../database/client/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/";
 				if (($handle = fopen($path."coordonnees.csv", "r"))) {
 					while (($data = fgetcsv($handle, 1000, ","))) {
 						echo "<tr><td>Adresse</td><td>".$data[7].",</br>".$data[8]." ".$data[9]."</td></tr>";
@@ -42,7 +42,7 @@
 		<button type = "button" onclick="modifier_donnees()">Modifier</button>
 
 		<p>Veuillez importer un justificatif permettant de valider la modification de vos coordonnées personnelles.</p>	
-        <form enctype="multipart/form-data" method="post" action="/Assure/gestion_upload/justificatif_coord.php">
+        <form enctype="multipart/form-data" method="post" action="./gestion_upload/justificatif_coord.php">
 			<p><input type="file" name="fileToUpload"></p>
 			<p><input type="submit" value="Importer"></p>
 		</form>
