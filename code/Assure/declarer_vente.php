@@ -10,7 +10,7 @@
 	<body>
 
 	<!-- bouton de déconnexion -->
-	<form method="POST" action="deconnexion.php">
+	<form method="POST" action="../deconnexion.php">
 		<input type="submit" name="OUT" value="Déconnexion"/>
 	</form>
 
@@ -25,7 +25,7 @@
 	?>
 
 	<h4>Déclaration de vente</h4>
-	<p>Certifiat de cession : <a href="./documents_administratifs/cerfa_cession.pdf">Déclaration_de_vente.pdf</a></p>
+	<p>Certifiat de cession : <a href="./documents_administratifs/cerfa_cession.pdf" target = "_blank">Déclaration_de_vente.pdf</a></p>
     <form enctype="multipart/form-data" method="post" action="./gestion_upload/cession.php">
 		<p><input type="file" name="fileToUpload"></p>
 		<p><input type="submit" value="Importer"></p>

@@ -9,6 +9,7 @@
 	</head>
 	<body>
         <?php
+			$path = "../../../database/client/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/Documents/";
             //on vérifie s'il y a des erreurs d'upload
 			if ($_FILES['fileToUpload']['error']  > 0 ) {
 				header('Location: ../changement_coord.php?upload=echec');
@@ -22,7 +23,7 @@
                 $verif = 1;
                 //comme on peut ajouter plusieurs images/témoignages il faut tous les garder en mémoire
                 while($verif){
-                	if(file_exists("../justificatif".$i.".".$extension[$n-1])){
+                	if(file_exists($path."justificatif".$i.".".$extension[$n-1])){
                 		$i++;
                 	}else{
                 		$verif = 0;
@@ -30,7 +31,7 @@
                 }
 			  	$res = move_uploaded_file( 
 			        $_FILES['fileToUpload']['tmp_name'], 
-			        "../justificatif".$i.".".$extension[$n-1]);
+			        $path."justificatif".$i.".".$extension[$n-1]);
 			  	if($res){
                     header('Location: ../changement_coord.php?upload=sucess');
 			  		exit();

@@ -11,7 +11,7 @@ function modifier_perso(){
 			document.getElementById("coord_perso").innerHTML = this.responseText;
 		}
 	}
-	xhttp.open("POST", "/icar/Assure/AJAX/modifier_perso.php", true);
+	xhttp.open("POST", "/icar/code/Assure/AJAX/modifier_perso.php", true);
 	xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 	xhttp.send("nom="+nom+"&prenom="+prenom+"&date="+date+"&civilite="+civilite+"&profession="+profession);
 }
@@ -29,7 +29,7 @@ function modifier_coord(){
 			document.getElementById("coord_perso").innerHTML = this.responseText;
 		}
 	};
-	xhttp.open("POST", "/icar/Assure/AJAX/modifier_coord.php", true);
+	xhttp.open("POST", "/icar/code/Assure/AJAX/modifier_coord.php", true);
 	xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 	xhttp.send("nom="+nom+"&prenom="+prenom+"&date="+date+"&civilite="+civilite+"&profession="+profession);
 }
@@ -41,7 +41,7 @@ function modifier_donnees(){
 			document.getElementById("donnees").innerHTML = this.responseText;
 		}
 	};
-	xhttp.open("POST", "/icar/Assure/AJAX/modifier_donnees.php", true);
+	xhttp.open("POST", "/icar/code/Assure/AJAX/modifier_donnees.php", true);
 	xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 	xhttp.send();
 }
@@ -59,7 +59,7 @@ function valider_donnees(){
 			document.getElementById("donnees").innerHTML = this.responseText;
 		}
 	};
-	xhttp.open("POST", "/icar/Assure/AJAX/valider_donnees.php", true);
+	xhttp.open("POST", "/icar/code/Assure/AJAX/valider_donnees.php", true);
 	xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 	xhttp.send("adresse="+adresse+"&ville="+ville+"&code="+code+"&telephone="+telephone+"&mail="+mail);
 }

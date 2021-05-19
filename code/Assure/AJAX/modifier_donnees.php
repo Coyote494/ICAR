@@ -14,7 +14,7 @@
         <p>Un justificatif de domicile est demandé si vous changer d'adresse.</p>
 			<table>
 				<?php
-					$path = "../../client/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/";
+					$path = "../../../database/client/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/";
 					if (($handle = fopen($path."coordonnees.csv", "r"))) {
 						while (($data = fgetcsv($handle, 1000, ","))) {
 							echo "<tr><td>Adresse</td><td><input type = 'text' id='adresse' multiple value ='".$data[7]."'></td></tr>";
