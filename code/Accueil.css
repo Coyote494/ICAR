@@ -7,7 +7,7 @@
 }
 
 #conteneur > div{
-	 margin: 10px;
+
 	 padding: 20px;
  }
 
@@ -118,9 +118,7 @@ margin: auto;
 }
 
 .milieu img{
-	display: flex;
-	justify-content: center;
-	width:1200px;
+	width:500px;
 	border-radius: 30px
 
 }
@@ -214,45 +212,55 @@ input[type=submit]:hover {
 }
 
 
-.covid-rtl{
+.covid-rtl{​​​​​​​
     text-align: center;
     background-color: white;
     color:red;
     overflow: hidden; /* important */
- }
+ }​​​​​​​
 
 
 .covid-rtl img{​​​​​​​
-    width: 150px;
+    width: 100px;
     opacity: 0.7; 
 
 
-}
+}​​​​​​​
 
 
-.covid-rtl > div {
+.covid-rtl > div {​​​​​​​
   display: inline-block; /* important */
   white-space: nowrap; /* important */
   animation: defilement-rtl 15s infinite linear; /* défilement */
   cursor: pointer;
   padding: 10px 2em 10px 100%;
-}
+}​​​​​​​
 
 
 
-.covid-rtl > div:first-letter {
+.covid-rtl > div:first-letter {​​​​​​​
   font-weight: 700;
   color: #F00;
-}
+}​​​​​​​
 
-@keyframes defilement-rtl {
-  0% {
+@keyframes defilement-rtl {​​​​​​​
+  0% {​​​​​​​
     -webkit-transform: translate(0);
     transform: translate(0);
-  }
-  100% {
+  }​​​​​​​
+  100% {​​​​​​​
     -webkit-transform: translate(-100%);
     transform: translate(-100%);
-  }
-}
+  }​​​​​​​
+}​​​
+
+
+
+
+
+
+
+
+
+
 
