@@ -20,19 +20,46 @@
 			$tab[4] = $_POST["civilite"];
 			$tab[5] = $_POST["date"];
 			$tab[6] = $_POST["profession"];
-			$i = 0;
-            $verif = 1;
-            //comme on peut ajouter plusieurs images/témoignages il faut tous les garder en mémoire
-            while($verif){
-            	if(file_exists("../".$chemin."Documents/justificatif".$i.".pdf")){
-            		$i++;
-            	}else{
-            		$verif = 0;
-            	}
-            }
+
+			$path = "../../database/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/Documents/";
+            //on vérifie s'il y a des erreurs d'upload
+			if ($_FILES['fileToUpload']['error']  > 0 ) {
+				header('Location: ../changement_coord.php?upload=echec');
+			  	exit();
+			} else{
+                //on déplace le fichier uploadé des fichiers temporaires dans son dossier de stockage
+                // et on vérifie que l'opéation s'est bien passé
+				$extension = explode('.', $_FILES['fileToUpload']['name']) ; //on enregistre le fichier sous la bonne extension
+                $n = count($extension);
+                $i = 0;
+                $verif = 1;
+                //comme on peut ajouter plusieurs justificatifs il faut tous les garder en mémoire
+                while($verif){
+                	if(file_exists($path."justificatif".$i.".".$extension[$n-1])){
+                		$i++;
+                	}else{
+                		$verif = 0;
+                	}
+                }
+			  	$res = move_uploaded_file( 
+			        $_FILES['fileToUpload']['tmp_name'], 
+			        $path."justificatif".$i.".".$extension[$n-1]);
+			  	if($res){
+                    header('Location: ../changement_coord.php?upload=sucess');
+			  		exit();
+			  	}else{
+                    header('Location: ../changement_coord.php?upload=echec');
+			  		exit();
+			  	}
+			}
+
 			$valeur = $tab[0].";".$tab[1].";".$tab[4].";".$tab[5].";".$tab[6].";".$chemin."Documents/justificatif".$i.".pdf";
-			setcookie("modif_donnees", $valeur, $secure = false, $expire = time()+60*60*24*30, $httponly = false, $path = "/icar/code/Gestionnaire");
 			if (($handle = fopen("../".$chemin.'coordonnees_tmp.csv', 'w'))) {
+				fputcsv($handle, $tab, ",");
+				fclose($handle);
+			}
+
+			if (($handle = fopen("../../../database/".$_SESSION["assurance"], 'w'))) {
 				fputcsv($handle, $tab, ",");
 				fclose($handle);
 			}
@@ -54,11 +81,5 @@
 			?>
 		</table>
 		<button type = "button" onclick="modifier_perso()">Modifier</button>
-
-		<p>Veuillez importer un justificatif permettant de valider la modification de vos données personnelles.</p>	
-        <form enctype="multipart/form-data" method="post" action="./gestion_upload/justificatif_coord.php">
-			<p><input type="file" name="fileToUpload" accept = ".pdf"></p>
-			<p><input type="submit" value="Importer"></p>
-		</form>
 	</body>
 </html>
