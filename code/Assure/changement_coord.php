@@ -32,7 +32,12 @@
 			<table>
 				<?php
 					$path = "../../database/client/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/";
-					if (($handle = fopen($path."coordonnees.csv", "r"))) {
+					if(file_exists($path."coordonnees_tmp.csv")){
+						$path = $path."coordonnees_tmp.csv";
+					}else{
+						$path = $path."coordonnees.csv";
+					}
+					if (($handle = fopen($path, "r"))) {
 						while (($data = fgetcsv($handle, 1000, ","))) {
 							echo "<tr><td>Civilité</td><td id = 'civilite'>".$data[4]."</td></tr>";
 							echo "<tr><td>Prénom</td><td id = 'prenom'>".$data[1]."</td></tr>";
@@ -52,7 +57,12 @@
 			<table>
 				<?php
 					$path = "../../database/client/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/";
-					if (($handle = fopen($path."coordonnees.csv", "r"))) {
+					if(file_exists($path."coordonnees_tmp.csv")){
+						$path = $path."coordonnees_tmp.csv";
+					}else{
+						$path = $path."coordonnees.csv";
+					}
+					if (($handle = fopen($path, "r"))) {
 						while (($data = fgetcsv($handle, 1000, ","))) {
 							echo "<tr><td>Adresse</td><td>".$data[7].",</br>".$data[8]." ".$data[9]."</td></tr>";
 							echo "<tr><td>Téléphone</td><td>".$data[10]."</td></tr>";
@@ -70,7 +80,12 @@
 			<table>
 				<?php
 					$path = "../../database/client/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/";
-					if (($handle = fopen($path."coordonnees.csv", "r"))) {
+					if(file_exists($path."coordonnees_tmp.csv")){
+						$path = $path."coordonnees_tmp.csv";
+					}else{
+						$path = $path."coordonnees.csv";
+					}
+					if (($handle = fopen($path, "r"))) {
 						while (($data = fgetcsv($handle, 1000, ","))) {
 							echo "<tr><td>Identifiant</td><td>".$data[2]."</td></tr>";
 							echo "<tr><td>Mot de passe</td><td>******</td><td>";
