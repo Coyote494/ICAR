@@ -16,7 +16,7 @@
 
 	<form method ="post" action ="m">
 		<table>
-			
+			<tr><strong>Information sur le véhicule</strong></tr>
 			<tr><td>Numéro d’immatriculation du véhicule (A) : </td><td><input type="text" name="A"></td></tr>
 			
 			<tr><td>Numéro d’identification du véhicule (E) : </td><td><input type="text" name="E"></td></tr>
@@ -34,11 +34,51 @@
 			<tr><td>Kilométrage inscrit au compteur du véhicule : </td><td><input type="text" name="kilometre"></td></tr>
 			
 			<tr><td>Présence du certificat d’immatriculation :  </td>
-				<td><input type="radio" id="oui" name="presence_certificat" value="oui">
-  				<label for="oui">Oui</label><br>
- 				<input type="radio" id="non" name="presence_certificat" value="non">
-  				<label for="non">Non</label><br></td></tr>
+				<td><input type="radio" id="oui_certif" name="presence_certificat" value="oui">
+  				<label for="oui_certif">Oui</label>
+ 				<input type="radio" id="non_certif" name="presence_certificat" value="non">
+  				<label for="non_certif">Non</label></td></tr>
+				
 
+			<tr><strong>Information sur l'ancien propriétaire</strong></tr>
+			<tr><td>Vous êtes ? </td>
+				<td><input type="radio" id="oui_old_proprio" name="old_proprio" value="oui">
+  				<label for="oui_old_proprio">Oui</label>
+ 				<input type="radio" id="non_old_proprio" name="old_proprio" value="non">
+  				<label for="non_old_proprio">Non</label></td></tr>
+			
+			<tr><td>N° de la voie :</td><td><input type="text" name="old_numero_voie"></td></tr>
+			
+			<tr><td>Complément (bis, ter...) :</td><td><input type="text" name="old_complement"></td></tr>
+			
+			<tr><td>Type de voie (rue, avenue...) :  </td><td><input type="text" name="old_type_rue"></td></tr>
+			
+			<tr><td>Nom de la voie : </td><td><input type="text" name="old_nom_voie"></td></tr>
+			
+			<tr><td>Code postal : </td><td><input type="text" name="old_code_postal"></td></tr>
+			
+			<tr><td>Commune : </td><td><input type="text" name="old_commune"></td></tr>
+			
+			<tr><td>Je certifie : </td>
+			<td><input type="radio" id="ceder" name="ceder" value="ceder">
+  				<label for="ceder">Céder</label>
+ 				<input type="radio" id="ceder_destruction" name="ceder_destruction" value="ceder_destruction">
+  				<label for="ceder_destruction">Céder pour destruction</label></td></tr>
+			
+			<tr><td>Le (JJ/MM/AAAA) : </td><td><input type="date" name="date_cession"></td></tr>
+			
+			<tr><td>à (HH:MM) : </td><td><input type="time" name="heure_cession"></td></tr>
+			
+			<tr><td colspan = 2 rowspan= 4>Je certifie en outre (veuillez cocher la ou les case(s) correspondante(s)) : <br>
+				<input type="checkbox" id="checkbox1" name="checkbox1" value="choix1">
+  				<label for="checkbox1"> Avoir remis au nouveau propriétaire un certificat établi depuis moins de quinze jours par le ministre de l’Intérieur,<br> attestant à sa date d’édition de la situation administrative du véhicule ;</label><br>
+  				<input type="checkbox" id="checkbox2" name="checkbox2" value="choix2">
+  				<label for="checkbox2"> Que ce véhicule n’a pas subi de transformation notable susceptible de modifier les indications du certificat de conformité <br> ou de l’actuel certificat d’immatriculation ;</label><br>
+  				<input type="checkbox" id="checkbox3" name="checkbox3" value="choix3">
+  				<label for="checkbox3"> Que ce véhicule est cédé pour destruction à un professionnel de la destruction des véhicules hors d’usage (VHU).</label></td></tr>
+
+			<tr><td>Fait à : </td><td><input type="text" name="lieu"></td></tr>
+			<tr><td>Le (JJ/MM/AAAA) : </td><td><input type="date" name="date_du_jour"></td></tr>
 		</table>
 	</form>
 
