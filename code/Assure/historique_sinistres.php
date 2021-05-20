@@ -16,7 +16,7 @@
 
         <div>Historique des sinistres</div>
 		<?php
-			$path = "../../database/client/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/Sinistres";
+			$path = "../../database/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/Sinistres";
 			function ScanDirectory($Directory){
 
 				$MyDirectory = opendir($Directory) or die('Erreur');

@@ -10,7 +10,7 @@
 	<body>
 
         <?php
-		    $chemin = "../../database/client/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/";
+		    $chemin = "../../database/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/";
 			if (($handle = fopen("../".$chemin.'/coordonnees.csv', 'r'))) {
 				$tab = fgetcsv($handle, 1000, ",");
                 fclose($handle);
@@ -40,8 +40,8 @@
         <h3>Mes données personnelles</h3>
 		<table>
 			<?php
-				$chemin = "../../../database/client/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/";
-				if (($handle = fopen("../".$chemin."coordonnees_tmp.csv", "r"))) {
+				$chemin = "../../../database/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/";
+				if (($handle = fopen($chemin."coordonnees_tmp.csv", "r"))) {
 					while (($data = fgetcsv($handle, 1000, ","))) {
 						echo "<tr><td>Civilité</td><td id = 'civilite'>".$data[4]."</td></tr>";
 						echo "<tr><td>Prénom</td><td id = 'prenom'>".$data[1]."</td></tr>";

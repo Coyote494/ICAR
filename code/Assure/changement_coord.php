@@ -31,7 +31,7 @@
 			<h3>Mes données personnelles</h3>
 			<table>
 				<?php
-					$path = "../../database/client/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/";
+					$path = "../../database/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/";
 					if(file_exists($path."coordonnees_tmp.csv")){
 						$path = $path."coordonnees_tmp.csv";
 					}else{
@@ -56,7 +56,7 @@
 			<h3>Mes coordonnées</h3>
 			<table>
 				<?php
-					$path = "../../database/client/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/";
+					$path = "../../database/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/";
 					if(file_exists($path."coordonnees_tmp.csv")){
 						$path = $path."coordonnees_tmp.csv";
 					}else{
@@ -79,7 +79,7 @@
 			<h3>Mes Informations de Connexion</h3>
 			<table>
 				<?php
-					$path = "../../database/client/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/";
+					$path = "../../database/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/";
 					if(file_exists($path."coordonnees_tmp.csv")){
 						$path = $path."coordonnees_tmp.csv";
 					}else{

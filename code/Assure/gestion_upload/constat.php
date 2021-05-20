@@ -14,7 +14,7 @@
 				header('Location: ../declarer_sinistre.php?upload=echec');
 			  	exit();
 			} else{
-				$path = "../../../database/client/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/Sinistres/";
+				$path = "../../../database/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/Sinistres/";
 				if(!isset($_SESSION["sinistre"])){
 					$i = 1;
 					while(file_exists($path."Sinistre_".$i)){

@@ -14,7 +14,7 @@
             <p>Un justificatif vous sera demander afin de valider la modification de vos coordonnées personnelles.</p>
 			<table>
 				<?php
-					$path = "../../../database/client/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/";
+					$path = "../../../database/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/";
 					if (($handle = fopen($path."coordonnees.csv", "r"))) {
 						while (($data = fgetcsv($handle, 1000, ","))) {
 							echo "<tr><td>Civilité</td><td><select id='civilite' size = '2'>";
