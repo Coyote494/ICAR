@@ -25,11 +25,15 @@
 	?>
 
 	<h4>Déclaration de vente</h4>
-	<p>Certifiat de cession : <a href="./documents_administratifs/cerfa_cession.pdf" target = "_blank">Déclaration_de_vente.pdf</a></p>
+	<p>Certifiat de cession de vierge: <a href="./documents_administratifs/cerfa_cession.pdf" target = "_blank">Déclaration_de_vente.pdf</a></p>
     <form enctype="multipart/form-data" method="post" action="./gestion_upload/cession.php">
 		<p><input type="file" name="fileToUpload"></p>
 		<p><input type="submit" value="Importer"></p>
 	</form>
+
+	<p><strong>Remplir mon certificat de cession en ligne :</strong></p>
+	<p><a href="./formulaire_cession_acheteur/cession_acheteur.php" target ="_self" >Remplir le certificat de cession en tant qu'acheteur.</a></p>
+	<p><a href="./formulaire_cession_vendeur/cession_vendeur.php" target ="_self" >Remplir le certificat de cession en tant que vendeur.</a></p>
 
 	</body>
 </html>
