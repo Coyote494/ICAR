@@ -11,17 +11,25 @@
 
         <?php
 		    $chemin = "../../database/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/";
-			if (($handle = fopen("../".$chemin.'/coordonnees.csv', 'r'))) {
-				$tab = fgetcsv($handle, 1000, ",");
-                fclose($handle);
+			if(file_exists("../".$chemin.'/coordonnees_tmp.csv')){
+				if (($handle = fopen("../".$chemin.'/coordonnees_tmp.csv', 'r'))) {
+					$tab = fgetcsv($handle, 1000, ",");
+					fclose($handle);
+				}
+			}else{
+				if (($handle = fopen("../".$chemin.'/coordonnees.csv', 'r'))) {
+					$tab = fgetcsv($handle, 1000, ",");
+					fclose($handle);
+				}
 			}
+			
 			$tab[0] = $_POST["nom"];
 			$tab[1] = $_POST["prenom"];
 			$tab[4] = $_POST["civilite"];
 			$tab[5] = $_POST["date"];
 			$tab[6] = $_POST["profession"];
 
-			$path = "../../database/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/Documents/";
+			$path = "../../../database/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/Justificatifs/";
             //on vérifie s'il y a des erreurs d'upload
 			if ($_FILES['fileToUpload']['error']  > 0 ) {
 				header('Location: ../changement_coord.php?upload=echec');
@@ -45,41 +53,46 @@
 			        $_FILES['fileToUpload']['tmp_name'], 
 			        $path."justificatif".$i.".".$extension[$n-1]);
 			  	if($res){
+					$valeur = array(
+							"0",
+							$tab[0],
+							$tab[1],
+							$tab[4],
+							$tab[5],
+							$tab[6],
+							$chemin."Justificatifs/justificatif".$i.".".$extension[$n-1]
+						);
+			
+					if (($handle = fopen("../".$chemin.'coordonnees_tmp.csv', 'w'))) {
+						fputcsv($handle, $tab, ",");
+						fclose($handle);
+					}
+					if (($handle = fopen("../../../database/".$_SESSION["assurance"]."/demande_changement.csv", 'a'))) {
+						fputcsv($handle, $valeur, ",");
+						fclose($handle);
+					}
+					echo " <h3>Mes données personnelles</h3> ";
+					echo "<table>";
+							$chemin = "../../../database/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/";
+							if (($handle = fopen($chemin."coordonnees_tmp.csv", "r"))) {
+								while (($data = fgetcsv($handle, 1000, ","))) {
+									echo "<tr><td>Civilité</td><td name = 'civilite'>".$data[4]."</td></tr>";
+									echo "<tr><td>Prénom</td><td name = 'prenom'>".$data[1]."</td></tr>";
+									echo "<tr><td>Nom</td><td name = 'nom'>".$data[0]."</td></tr>";
+									echo "<tr><td>Date de naissance</td><td name = 'date'>".$data[5]."</td></tr>";
+									echo "<tr><td>Profession</td><td name = 'profession'>".$data[6]."</td></tr>";
+								}
+								fclose($handle);
+							}
+					echo "</table>";
+					echo '<button type = "button" onclick="modifier_perso()">Modifier</button>';
                     header('Location: ../changement_coord.php?upload=sucess');
 			  		exit();
 			  	}else{
-                    header('Location: ../changement_coord.php?upload=echec');
+                	header('Location: ../changement_coord.php?upload=echec');
 			  		exit();
 			  	}
 			}
-
-			$valeur = $tab[0].";".$tab[1].";".$tab[4].";".$tab[5].";".$tab[6].";".$chemin."Documents/justificatif".$i.".pdf";
-			if (($handle = fopen("../".$chemin.'coordonnees_tmp.csv', 'w'))) {
-				fputcsv($handle, $tab, ",");
-				fclose($handle);
-			}
-
-			if (($handle = fopen("../../../database/".$_SESSION["assurance"], 'w'))) {
-				fputcsv($handle, $tab, ",");
-				fclose($handle);
-			}
 		?>
-        <h3>Mes données personnelles</h3>
-		<table>
-			<?php
-				$chemin = "../../../database/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/";
-				if (($handle = fopen($chemin."coordonnees_tmp.csv", "r"))) {
-					while (($data = fgetcsv($handle, 1000, ","))) {
-						echo "<tr><td>Civilité</td><td id = 'civilite'>".$data[4]."</td></tr>";
-						echo "<tr><td>Prénom</td><td id = 'prenom'>".$data[1]."</td></tr>";
-						echo "<tr><td>Nom</td><td id = 'nom'>".$data[0]."</td></tr>";
-						echo "<tr><td>Date de naissance</td><td id = 'date'>".$data[5]."</td></tr>";
-						echo "<tr><td>Profession</td><td id = 'profession'>".$data[6]."</td></tr>";
-					}
-					fclose($handle);
-				}
-			?>
-		</table>
-		<button type = "button" onclick="modifier_perso()">Modifier</button>
 	</body>
 </html>

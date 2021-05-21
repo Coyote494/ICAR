@@ -11,17 +11,17 @@
 
         <div>
         <h3>Mes coordonnées</h3>
-			<form enctype="multipart/form-data" method="post" action="./AJAX/modifier_coord.php">	
+			<form enctype="multipart/form-data" method="post" action="./AJAX/valider_donnees.php">	
 				<table>
 					<?php
 						$path = "../../../database/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/";
 						if (($handle = fopen($path."coordonnees.csv", "r"))) {
 							while (($data = fgetcsv($handle, 1000, ","))) {
-								echo "<tr><td>Adresse</td><td><input type = 'text' id='adresse' multiple value ='".$data[7]."' required></td></tr>";
-								echo "<tr><td>Code postal</td><td><input type = 'text' id='code' value =".$data[8]." required></td></tr>"; 
-								echo "<tr><td>Ville</td><td><input type = 'text' id='ville' value =".$data[9]." required></td></tr>";                 
-								echo "<tr><td>Téléphone</td><td><input type = 'tel' id='telephone' value =".$data[10]." required></td></tr>";
-								echo "<tr><td>E-Mail</td><td><input type = 'email' id='mail' value =".$data[11]." required></td></tr>";
+								echo "<tr><td>Adresse</td><td><input type = 'text' name='adresse' multiple value ='".$data[7]."' required></td></tr>";
+								echo "<tr><td>Code postal</td><td><input type = 'text' name='code' value =".$data[8]." required></td></tr>"; 
+								echo "<tr><td>Ville</td><td><input type = 'text' name='ville' value =".$data[9]." required></td></tr>";                 
+								echo "<tr><td>Téléphone</td><td><input type = 'tel' name='telephone' value =".$data[10]." required></td></tr>";
+								echo "<tr><td>E-Mail</td><td><input type = 'email' name='mail' value =".$data[11]." required></td></tr>";
 							}
 							fclose($handle);
 						}
