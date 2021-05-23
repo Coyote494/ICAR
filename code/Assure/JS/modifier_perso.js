@@ -15,7 +15,7 @@ function modifier_perso(){
 	xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 	xhttp.send("nom="+nom+"&prenom="+prenom+"&date="+date+"&civilite="+civilite+"&profession="+profession);
 }
-
+/*
 function modifier_coord(){
 	civilite = document.getElementById("civilite").value;
     prenom = document.getElementById("prenom").value;
@@ -32,7 +32,7 @@ function modifier_coord(){
 	xhttp.open("POST", "/icar/code/Assure/AJAX/modifier_coord.php", true);
 	xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 	xhttp.send("nom="+nom+"&prenom="+prenom+"&date="+date+"&civilite="+civilite+"&profession="+profession);
-}
+}*/
 
 function modifier_donnees(){
 	xhttp = new XMLHttpRequest();
@@ -45,7 +45,7 @@ function modifier_donnees(){
 	xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 	xhttp.send();
 }
-
+/*
 function valider_donnees(){
 	adresse = document.getElementById("adresse").value;
     code = document.getElementById("code").value;
@@ -62,4 +62,4 @@ function valider_donnees(){
 	xhttp.open("POST", "/icar/code/Assure/AJAX/valider_donnees.php", true);
 	xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 	xhttp.send("adresse="+adresse+"&ville="+ville+"&code="+code+"&telephone="+telephone+"&mail="+mail);
-}
+}*/
