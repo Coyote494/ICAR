@@ -5,16 +5,15 @@
 <html lang = "fr">
 	<head>
 		<title>Historique des sinistres</title>
+		<link rel="stylesheet" type="text/css" href="historique_sinistre.css" />
 		<meta charset="utf-8">
 	</head>
 	<body>
 
-		<!-- bouton de déconnexion -->
-		<form method="POST" action="../deconnexion.php">
-			<input type="submit" name="OUT" value="Déconnexion"/>
-		</form>
-
-        <div>Historique des sinistres</div>
+		<div class="bandeau">
+			<img src="../img/logo.png">
+        	<h2>Historique des sinistres</h2>
+        </div>		
 		<?php
 			$path = "../../database/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/Sinistres";
 			function ScanDirectory($Directory){
@@ -35,6 +34,11 @@
 			ScanDirectory($path);
 		?>
 
+
+		<!-- bouton de déconnexion -->
+		<form method="POST" action="../deconnexion.php">
+			<input type="submit" name="OUT" value="Déconnexion"/>
+		</form>
 
 	</body>
 </html>
