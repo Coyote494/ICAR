@@ -1,0 +1,49 @@
+.haut{
+  text-align: center;
+  font-family: "Karma", sans-serif
+  font-size: 20px;
+}
+
+img{
+	height: 60px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-radius: 5px;
+  border:solid black;
+  padding: 70px;
+}
+
+.declarer_sinistre, .historique_sinistres, .changement_coord , .declarer_vente{
+  border:solid;
+  border-radius: 8px;
+  border-color: #2e7d32;
+  margin-right: 2%;
+  font-family: 'Noto Sans JP', sans-serif;
+  padding: 10px;
+}
+}
+
+.container > div {
+  background-color: #fafafa;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+}
+
+a.lien{color: #2e7d32}
+
+a.lien{
+	text-decoration : none;
+}
+
+.bouton{
+  background-color: #2e7d32;
+    color:white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+}

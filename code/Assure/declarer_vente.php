@@ -5,14 +5,11 @@
 <html lang = "fr">
 	<head>
 		<title>Déclaration de vente</title>
+		<link rel="stylesheet" type="text/css" href="declarer_vente.css" />
 		<meta charset="utf-8">
 	</head>
 	<body>
 
-	<!-- bouton de déconnexion -->
-	<form method="POST" action="../deconnexion.php">
-		<input type="submit" name="OUT" value="Déconnexion"/>
-	</form>
 
 	<?php
 		if (isset($_GET["upload"])) {
@@ -23,17 +20,24 @@
 			}
 		}
 	?>
-
-	<h4>Déclaration de vente</h4>
-	<p>Certifiat de cession de vierge: <a href="./documents_administratifs/cerfa_cession.pdf" target = "_blank">Déclaration_de_vente.pdf</a></p>
-    <form enctype="multipart/form-data" method="post" action="./gestion_upload/cession.php">
-		<p><input type="file" name="fileToUpload"></p>
-		<p><input type="submit" value="Importer"></p>
+	<div class="bandeau">
+		<img src="/Projet/code/img/logo.png">
+		<h2>Déclaration de vente</h4>
+	</div>
+	<div class="container">
+		<div class="certificat">
+			<p>Voici un exemple vierge de certificat de cession : <a href="./documents_administratifs/cerfa_cession.pdf" target = "_blank">Déclaration_de_vente.pdf</a></p>
+    		<form enctype="multipart/form-data" method="post" action="./gestion_upload/cession.php">
+    		</form>
+   		 </div>
+   		 <div class="fichier">
+			<p> Veuillez importer vos fichiers : <input type="file" name="fileToUpload"></p>
+			<p><input type="submit" value="Importer" class="bouton" ></p>
+		</div>
+	</div>
+	<!-- bouton de déconnexion -->
+	<form method="POST" action="../deconnexion.php">
+		<input type="submit" name="OUT" value="Déconnexion" class="bouton"/>
 	</form>
-
-	<p><strong>Remplir mon certificat de cession en ligne :</strong></p>
-	<p><a href="./formulaire_cession_acheteur/cession_acheteur.php" target ="_self" >Remplir le certificat de cession en tant qu'acheteur.</a></p>
-	<p><a href="./formulaire_cession_vendeur/cession_vendeur.php" target ="_self" >Remplir le certificat de cession en tant que vendeur.</a></p>
-
 	</body>
 </html>

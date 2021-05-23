@@ -8,6 +8,7 @@
 <html lang = "fr">
 	<head>
 		<title>Déclaration de changement de coordonnées</title>
+		<link rel="stylesheet" type="text/css" href="changement_coord.css" />
 		<meta charset="utf-8">
 	</head>
 	<body>
@@ -20,24 +21,34 @@
 				}
 			}
 		?>
-		<!-- bouton de déconnexion -->
-		<form method="POST" action="../deconnexion.php">
-			<input type="submit" name="OUT" value="Déconnexion"/>
-		</form>
-
+		
+	<div class="bandeau"> 
+		<img src="/Projet/code/img/logo.png">
         <h2>Déclarer un changement de coordonnées</h2>
-
+    </div>
+    	<div class="container">
+    		<div id="infos">
+			<h3>Mes informations de connexion</h3>
+			<table>
+				<?php
+					$path = "../../database/client/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/";
+					if (($handle = fopen($path."coordonnees.csv", "r"))) {
+						while (($data = fgetcsv($handle, 1000, ","))) {
+							echo "<tr><td>Identifiant</td><td>".$data[2]."</td></tr>";
+							echo "<tr><td>Mot de passe</td><td>******</td><td>";
+							echo '<form action="modifierMDP.php"><input type="submit" value="Modifier mot de passe" class="bouton"></form></td></tr>';
+						}
+						fclose($handle);
+					}
+				?>
+			</table>
+		</div>
 		<div id="coord_perso">
 			<h3>Mes données personnelles</h3>
 			<table>
 				<?php
-					$path = "../../database/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/";
-					if(file_exists($path."coordonnees_tmp.csv")){
-						$path = $path."coordonnees_tmp.csv";
-					}else{
-						$path = $path."coordonnees.csv";
-					}
-					if (($handle = fopen($path, "r"))) {
+					$path = "../../database/client/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/";
+					if (($handle = fopen($path."coordonnees.csv", "r"))) {
 						while (($data = fgetcsv($handle, 1000, ","))) {
 							echo "<tr><td>Civilité</td><td id = 'civilite'>".$data[4]."</td></tr>";
 							echo "<tr><td>Prénom</td><td id = 'prenom'>".$data[1]."</td></tr>";
@@ -56,13 +67,8 @@
 			<h3>Mes coordonnées</h3>
 			<table>
 				<?php
-					$path = "../../database/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/";
-					if(file_exists($path."coordonnees_tmp.csv")){
-						$path = $path."coordonnees_tmp.csv";
-					}else{
-						$path = $path."coordonnees.csv";
-					}
-					if (($handle = fopen($path, "r"))) {
+					$path = "../../database/client/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/";
+					if (($handle = fopen($path."coordonnees.csv", "r"))) {
 						while (($data = fgetcsv($handle, 1000, ","))) {
 							echo "<tr><td>Adresse</td><td>".$data[7].",</br>".$data[8]." ".$data[9]."</td></tr>";
 							echo "<tr><td>Téléphone</td><td>".$data[10]."</td></tr>";
@@ -74,28 +80,12 @@
 			</table>
 			<button type = "button" onclick="modifier_donnees()">Modifier</button>
 		</div>
+	</div>
 
-		<div>
-			<h3>Mes Informations de Connexion</h3>
-			<table>
-				<?php
-					$path = "../../database/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/";
-					if(file_exists($path."coordonnees_tmp.csv")){
-						$path = $path."coordonnees_tmp.csv";
-					}else{
-						$path = $path."coordonnees.csv";
-					}
-					if (($handle = fopen($path, "r"))) {
-						while (($data = fgetcsv($handle, 1000, ","))) {
-							echo "<tr><td>Identifiant</td><td>".$data[2]."</td></tr>";
-							echo "<tr><td>Mot de passe</td><td>******</td><td>";
-							echo '<form action="modifierMDP.php"><input type="submit" value="Modifier mot de passe"></form></td></tr>';
-						}
-						fclose($handle);
-					}
-				?>
-			</table>
-		</div>
 		<script type="text/javascript" src="./JS/modifier_perso.js"></script>
+		<!-- bouton de déconnexion -->
+		<form method="POST" action="../deconnexion.php">
+			<input type="submit" name="OUT" value="Déconnexion"/>
+		</form>
 	</body>
 </html>
