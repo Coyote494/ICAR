@@ -1,11 +1,14 @@
 .cadre{
-	background-color: #e0e0e0;
-	border:1px solid red;
+
+	background-color: red;
  	padding:3px;
- 	margin-right: 30%;
- 	margin-left: 30%;
- 	border: inset 3px;
+ 	border-radius: 8px;
+ 	border-color: #2e7d32;
+ 	border-width: 3px;
+ 	padding: 70px;
 }
+
+
 
 
 

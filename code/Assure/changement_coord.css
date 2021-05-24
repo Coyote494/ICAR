@@ -1,0 +1,49 @@
+.bandeau{
+	text-align: center;
+	font-family: "Karma", sans-serif
+	font-family: 'Noto Sans JP', sans-serif;
+	font-size: 20px;
+}
+
+img{
+	height: 60px;
+}
+
+#coord_perso, #donnees, #infos {
+	border:solid;
+	border-radius: 8px;
+	border-color: #2e7d32;
+	margin-right: 3%;
+	background-color: #fafafa;
+	font-family: 'Noto Sans JP', sans-serif;
+	padding: 7px;
+}
+
+.deconnexion{
+	text-align: right;
+}
+.container{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	border-radius: 5px;
+	border:solid black;
+	padding: 50px;
+}
+
+.bouton{
+	background-color: #2e7d32;
+    color:white;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+button{
+	background-color: #2e7d32;
+    color:white;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+
+}

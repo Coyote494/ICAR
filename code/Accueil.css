@@ -1,20 +1,21 @@
-#conteneur{
+body{
+  font-family: verdana, sans-serif;
+}
+
+.conteneur{
 	display: flex;
 	width: 100%;
 	flex-direction: row;
-	background-color: #fafafa;
 	justify-content: space-between;
+  border-radius: 20px;
 }
 
-#conteneur > div{
 
+.conteneur > div{
+	 margin: 10px;
 	 padding: 20px;
  }
 
-#header{
-	background-color: #fafafa;
-		
-}
 
 #header img{
 	margin-left: 10px;
@@ -26,13 +27,13 @@
 	font-size:25px;
 	width: 50%;
 	background-color: transparent;
+  text-align: center;
 
 }
 
 
-.button {
-	transition-duration: 0.2s;
-	background-color: #fafafa;
+.button:hover{
+	background-color: white;
 	color: #2e7d32; 
 	border-radius:12px;
 	border: 2px solid #2e7d32;
@@ -42,11 +43,12 @@
 }
 
 
-.button:hover {
+.button {
+  transition-duration: 0.2s;
 	background-color: #2e7d32;
-	color:#fafafa;
+	color:white;
 	border-radius:12px;
-	border: 2px solid #fafafa;
+	border: 2px solid white;
 	font-size:16px;
 	padding: 15px;
 }
@@ -110,18 +112,21 @@ margin: auto;
 }
 
 .milieu{
-	border: 1px solid #2e7d32;
-	padding: 200px;
 	text-align: center;
-	background-color: white;
 	color:red;
+  background-color: #dcd9d9;
+  background-image: url(img/fond1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 250px;
 }
 
-.milieu img{
-	width:500px;
-	border-radius: 30px
-
+.pq{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
+
 #choix{
 	display: flex;
 	width: 100%;
@@ -136,44 +141,58 @@ margin: auto;
 	flex-direction: row;
 	justify-content: space-around;
 	width: 100%;
-	border: 1px solid red;
-	padding: 50px;
+  background-color: #424242;
+  color:white;
 }
-.bas h1{
-	text-align: center
+
+.oui{
+  text-align: center;
+  background-color: #424242;
+  padding:10px;
+  color: white;
+}
+
+.fleches{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  background-color: #424242;
+}
+
+.fleche1 img{
+  width: 100px;
 }
 
  .contact  p img{
  	vertical-align: middle;
  	width: 20px;
-    display: flex;
-    flex-direction: column;
-    float: left;
+  display: flex;
+  flex-direction: column;
+  float: left;
 
  }
 
 .contact {
   border-radius: 5px;
   padding: 10px;
-  background-color: pink;
 
 }
 
-.formulaire{
- padding-left: 5px;
+
+.pq{
+  padding: 100px;
 }
-
-
-
-
 
 #dallas{
-	border: 1px solid red;
-	padding: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20px;
 }
 
 .rating a {
-   float: right;/*glisser de droite à gauche donc invese le sens qui été par défaut*/
+   float: right;/*glisser de droite à gauche donc inverse le sens qui été par défaut*/
    color: #aaa;
    text-decoration: none;
    font-size: 3em;
@@ -212,55 +231,53 @@ input[type=submit]:hover {
 }
 
 
-.covid-rtl{​​​​​​​
-    text-align: center;
-    background-color: white;
-    color:red;
-    overflow: hidden; /* important */
- }​​​​​​​
+.covid-rtl{
+  overflow: hidden; /* important */
+  background-image:  url(img/Attention.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 1650px
+  height:500px;
+
+ }
 
 
 .covid-rtl img{​​​​​​​
-    width: 100px;
-    opacity: 0.7; 
+  background-image:  url(img/Attention.png);
+  background-repeat: no-repeat;
+  width: 100px;
+  opacity: 0.7; 
+  margin-left: 10%;
+}
 
 
-}​​​​​​​
-
-
-.covid-rtl > div {​​​​​​​
+.covid-rtl > div {
   display: inline-block; /* important */
   white-space: nowrap; /* important */
   animation: defilement-rtl 15s infinite linear; /* défilement */
   cursor: pointer;
   padding: 10px 2em 10px 100%;
-}​​​​​​​
+}
 
 
 
-.covid-rtl > div:first-letter {​​​​​​​
+.covid-rtl > div:first-letter {
   font-weight: 700;
   color: #F00;
-}​​​​​​​
+}
 
-@keyframes defilement-rtl {​​​​​​​
-  0% {​​​​​​​
+@keyframes defilement-rtl {
+  0% {
     -webkit-transform: translate(0);
     transform: translate(0);
-  }​​​​​​​
-  100% {​​​​​​​
+  }
+  100% {
     -webkit-transform: translate(-100%);
     transform: translate(-100%);
-  }​​​​​​​
-}​​​
+  }
+}
 
-
-
-
-
-
-
-
-
-
+.reseau{
+  background-color: #424242
+}
 

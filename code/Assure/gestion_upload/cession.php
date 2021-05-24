@@ -9,7 +9,7 @@
 	</head>
 	<body>
         <?php
-			$path = "../../../database/client/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/Documents/";
+			$path = "../../../database/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/Documents/";
             //on vérifie s'il y a des erreurs d'upload
 			if ($_FILES['fileToUpload']['error']  > 0 ) {
 				header('Location: ../declarer_vente.php?upload=echec');

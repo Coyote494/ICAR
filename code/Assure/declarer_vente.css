@@ -1,0 +1,40 @@
+.bandeau{
+	text-align: center;
+	font-family: "Karma", sans-serif
+	font-family: 'Noto Sans JP', sans-serif;
+	font-size: 20px;
+}
+
+img{
+height: 60px;
+}
+
+
+
+
+.container{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	border-radius: 5px;
+	border:solid black;
+	padding: 50px;
+}
+
+.bouton{
+	background-color: #2e7d32;
+    color:white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.fichier, .certificat{
+	border:solid;
+	border-radius: 8px;
+	border-color: #2e7d32;
+	margin-right: 2%;
+	background-color: #fafafa;
+	font-family: 'Noto Sans JP', sans-serif;
+	padding: 5px;
+}

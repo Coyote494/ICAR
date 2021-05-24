@@ -1,0 +1,35 @@
+.bandeau{
+	text-align: center;
+	font-family: "Karma", sans-serif
+	font-family: 'Noto Sans JP', sans-serif;
+	font-size: 20px;
+}
+
+.container{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	border-radius: 5px;
+	border:solid black;
+	padding: 50px;
+}
+
+.lettre, .constat, .images ,.depot{
+	border:solid;
+	border-radius: 8px;
+	border-color: #2e7d32;
+	margin-right: 2%;
+	background-color: #fafafa;
+	font-family: 'Noto Sans JP', sans-serif;
+	padding: 5px;
+}
+
+img{
+	height: 60px;
+}
+
+.deconnexion{
+	text-align: right;
+}
+
+	

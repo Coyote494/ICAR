@@ -5,14 +5,26 @@
 <html lang = "fr">
 	<head>
 		<title>Modifier MDP</title>
+		<link rel="stylesheet" type="text/css" href="modifierMDP.css" />
 		<meta charset="utf-8">
 	</head>
 	<body>
+	<div class="bandeau">
+		<img src="../img/logo.png">
+		<h1>Modifier votre mot de passe</h1>
+	</div>
+
+	<div class="container">
 		<form method="post" action="./mdp.php">
-            <p>Ancien Mot de passe<input type="password" name="old_mdp" required></p>
-			<p>Nouveau Mot de passe<input type="password" name="mdp" required></p>
-			<p>Vérifier le nouveau Mot de passe<input type="password" name="mdp2" required></p>
-			<p><input type="submit" value="Changer Mot de passe"></p>
+            <label for="old_mdp">Ancien mot de passe :</label></br></br>
+			<input type="password" name="old_mdp" required></label></br></br>
+
+			<label for="mdp">Nouveau mot de passe :</label></br></br>
+			<input type="password" name="mdp" required></br></br>
+			<label for="mdp2">Saisissez à nouveau votre mot de passe :</label></br></br>
+			<input type="password" name="mdp2" required></br></br>
+
+			<input type="submit" value="Changer mot de passe" class="bouton">
 		</form>
 		<?php
 			if (isset($_GET["erreur"])) {
@@ -25,7 +37,8 @@
 			}   
 		?>
 		<form action="./accueil_assure.php">
-   			<p><input type="submit" value="Retour accueuil"></p>
+   			<p><input type="submit" value="Retour à l'accueil" class="bouton"></p>
 		</form>
+	</div>
 	</body>
 </html>
