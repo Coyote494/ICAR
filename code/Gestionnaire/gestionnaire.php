@@ -22,5 +22,6 @@
 				<a href="#">signaler un problème<a>
 			</div>
 		</div>
+		 <iframe src="liste_message.php" width="300" height="400"></iframe>
 	</body>
 </html>

@@ -45,6 +45,11 @@
         <p><a href='declarer_vente.php' class='lien'>Déclarer de vente/cession</a></p>
         <div>Mes contrats</div>
         <div>Contact et infos</div> -->
-        <iframe src="messagerie.php" width="300" height="400"></iframe>
+
+        <div id="messagerie">
+        	<img src="./img/discussion.png" onclick="afficher_messagerie()" width="50px" height="30px">
+        </div>
+        <script type="text/javascript" src="./JS/accueil_assure.js?v=<?= filemtime('js/script.js'); ?>"></script>
+        <!-- <iframe src="messagerie.php" width="300" height="400"></iframe> -->
 	</body>
 </html>
