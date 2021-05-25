@@ -1,6 +1,6 @@
 function messagerie(){
 	message = document.getElementById("mon_message").value;		//on récupère le message écrit par l'utilisateur
-
+	console.log(message);
 	document.getElementById("mon_message").value = "";			//on remet la valeur du champ à 0
 
 	xhttp = new XMLHttpRequest();								//on enregistre le message dans le fichier conversation via AJAX

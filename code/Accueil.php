@@ -10,7 +10,7 @@ session_start();
 	<body>
 		<div class= "conteneur">
 			<div id="header">
-				<img src="img/logo.png">
+				<img src="./img/logo.png">
 			</div>
 
 			<div id="info">  
@@ -37,7 +37,7 @@ session_start();
 			
 		</div>
 	<div class="covid-rtl">
-        <div><img src="img/virus.png"></div>
+        <div><img src="./img/virus.png"></div>
     </div>
 
 
@@ -69,19 +69,19 @@ session_start();
      </div>
      <div class="fleches">
 	     <div class="fleche1"> 
-	     	<img src="img/fleche-bas-gauche.jpg">
+	     	<img src="./img/fleche-bas-gauche.jpg">
 	     </div>
 	     <div class="fleche1">
-	     	<img src="img/fleche-bas-droite.jpg">
+	     	<img src="./img/fleche-bas-droite.jpg">
 	     </div>
      </div>
 
      <div class="bas">
 	 <div class="contact">
 		<h1>Nos contacts</h1>
-		<p><img src="img/tel.png" hspace="5"></p> <p>Notre téléphone : 06 40 90 54 32</p>
-		<p><img src="img/mail.png" hspace="5" ></p> <p>Notre email : Icar.assu@gmail.com</p> 
-		<p><img src="img/maison.png" hspace="5"></p> <p>Notre adresse : 2 avenue Lafayette 33000 Bordeaux</p>
+		<p><img src="./img/tel.png" hspace="5"></p> <p>Notre téléphone : 06 40 90 54 32</p>
+		<p><img src="./img/mail.png" hspace="5" ></p> <p>Notre email : Icar.assu@gmail.com</p> 
+		<p><img src="./img/maison.png" hspace="5"></p> <p>Notre adresse : 2 avenue Lafayette 33000 Bordeaux</p>
 	</div>
 
 
@@ -108,10 +108,10 @@ session_start();
 </div>
 </div>
 <div class="reseau">
-	<div><a href="https://www.facebook.com"><img src="img/facebook.png"> </a></div>
-	<div><a href="https://www.instagram.com"><img src="img/insta.png"></a></div>
-	<div><a href="https://www.linkedin.com"><img src="img/ld.png"></a></div>
-	<div><a href="https://twitter.com"><img src="img/twitter.png"></a></div>
+	<div><a href="https://www.facebook.com"><img src="./img/facebook.png"> </a></div>
+	<div><a href="https://www.instagram.com"><img src="./img/insta.png"></a></div>
+	<div><a href="https://www.linkedin.com"><img src="./img/ld.png"></a></div>
+	<div><a href="https://twitter.com"><img src="./img/twitter.png"></a></div>
 </div>
 
 </body>

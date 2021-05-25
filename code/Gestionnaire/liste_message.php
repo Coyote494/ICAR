@@ -24,6 +24,6 @@
 		?>
 		</div>
 		<div id="conversation"></div>
-		<script type="text/javascript" src="./JS/liste_message.js?v=<?= filemtime('js/script.js'); ?>"></script>
+		<script type="text/javascript" src="./JS/liste_message.js"></script>
 	</body>
 </html>
