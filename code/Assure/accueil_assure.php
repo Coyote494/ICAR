@@ -5,7 +5,7 @@
 <html lang = "fr">
 	<head>
 		<title>Accueil Assuré</title>
-		<link rel="stylesheet" type="text/css" href="accueil_assure.css" />
+		<link rel="stylesheet" type="text/css" href="./CSS/accueil_assure.css" />
 
 		<meta charset="utf-8">
 	</head>

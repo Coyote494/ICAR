@@ -6,7 +6,7 @@
 <html lang="fr">
 	<head>
 		<title>Connexion</title>
-		<link rel="stylesheet" type="text/css" href="connexion.css" />
+		<link rel="stylesheet" type="text/css" href="./CSS/connexion.css" />
 	</head>
 	<body>
 		<div class="cadre">

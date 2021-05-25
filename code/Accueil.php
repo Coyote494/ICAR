@@ -5,7 +5,7 @@ session_start();
 <html>
 	<head>
 		<title>I-Car</title>
-		<link rel="stylesheet" type="text/css" href="Accueil.css" />
+		<link rel="stylesheet" type="text/css" href="./CSS/Accueil.css" />
 	</head>
 	<body>
 		<div class= "conteneur">

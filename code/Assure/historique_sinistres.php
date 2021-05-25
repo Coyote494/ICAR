@@ -5,7 +5,7 @@
 <html lang = "fr">
 	<head>
 		<title>Historique des sinistres</title>
-		<link rel="stylesheet" type="text/css" href="historique_sinistre.css" />
+		<link rel="stylesheet" type="text/css" href="./CSS/historique_sinistre.css" />
 		<meta charset="utf-8">
 	</head>
 	<body>
