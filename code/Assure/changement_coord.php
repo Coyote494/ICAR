@@ -36,7 +36,7 @@
 					if (($handle = fopen($path."coordonnees.csv", "r"))) {
 						while (($data = fgetcsv($handle, 1000, ","))) {
 							echo "<tr><td>Identifiant</td><td>".$data[2]."</td></tr>";
-							echo "<tr><td>Mot de passe</td><td>******</td><td>";
+							echo "<tr><td>Mot de passe</td><td>******</td><td></br>";
 							echo '<form action="modifierMDP.php"><input type="submit" value="Modifier mot de passe" class="bouton"></form></td></tr>';
 						}
 						fclose($handle);
