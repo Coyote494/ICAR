@@ -9,7 +9,7 @@
 	</head>
 	<body>
 		<?php
-			$path = "../../../database/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/";
+			$path = "../../../database/".$_SESSION["assurance"]."/".$_POST["nom"][0]."/".$_POST["nom"]."_".$_POST["prenom"]."/";
 			if (($handle = fopen($path."discussion.csv", "r"))) {
 				while (($data = fgetcsv($handle, 1000, ","))) {
 					if($data[0] == "client"){

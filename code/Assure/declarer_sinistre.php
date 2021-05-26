@@ -5,7 +5,7 @@
 <html lang = "fr">
 	<head>
 		<title>Déclaration de sinistre</title>
-		<link rel="stylesheet" type="text/css" href="declarer_sinistre.css" />
+		<link rel="stylesheet" type="text/css" href="./CSS/declarer_sinistre.css" />
 		<meta charset="utf-8">
 	</head>
 	<body>

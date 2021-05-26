@@ -9,7 +9,7 @@
 <html lang = "fr">
 	<head>
 		<title>Déclaration de changement de coordonnées</title>
-		<link rel="stylesheet" type="text/css" href="changement_coord.css" />
+		<link rel="stylesheet" type="text/css" href="./CSS/changement_coord.css" />
 		<meta charset="utf-8">
 	</head>
 	<body>

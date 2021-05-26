@@ -1,0 +1,47 @@
+.cadre{
+
+	background-color: #fafafa;
+	border:solid ;
+ 	padding:3px;
+ 	margin-right: 30%;
+ 	margin-left: 30%;
+	background-color: red;
+ 	padding:3px;
+ 	border-radius: 8px;
+ 	border-color: #2e7d32;
+ 	border-width: 3px;
+ 	padding: 70px;
+}
+
+.bandeau{
+	text-align: center;
+	margin-right: 30%;
+	margin-left: 30%;
+    font-family: "Karma", sans-serif
+}
+.bandeau img{
+	height: 60px;
+}
+
+.portail{
+	text-align: center;
+}
+
+.mdp_forget{
+	text-align: center;
+}
+body{
+	background-color:  white;
+}
+
+.bouton{
+	background-color: #2e7d32;
+    color:white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer; 
+}
+
+background-color:  #fafafa;
+

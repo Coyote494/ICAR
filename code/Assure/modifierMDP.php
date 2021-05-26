@@ -5,7 +5,7 @@
 <html lang = "fr">
 	<head>
 		<title>Modifier MDP</title>
-		<link rel="stylesheet" type="text/css" href="modifierMDP.css" />
+		<link rel="stylesheet" type="text/css" href="./CSS/modifierMDP.css" />
 		<meta charset="utf-8">
 	</head>
 	<body>

@@ -5,7 +5,7 @@
 <html lang = "fr">
 	<head>
 		<title>Déclaration de vente</title>
-		<link rel="stylesheet" type="text/css" href="declarer_vente.css" />
+		<link rel="stylesheet" type="text/css" href="./CSS/declarer_vente.css" />
 		<meta charset="utf-8">
 	</head>
 	<body>
