@@ -15,7 +15,7 @@
 	<h1>Portail de connexion</h1> <!--formulaire-->
 </div>
 <div class="portail">
-	<form method="post" action="verificationConnexion.php">
+	<form method="post" action="./verification_connexion.php">
 		<p>Identifiant : <input type="text" name="id" required> </p> <!--zone de texte pour que l'utilisateur la remplisse-->
 		<p>Mot de passe : <input type="password" name="mdp" required></p> <!--zone de texte pour que l'utilisateur la remplisse-->
 		<p><input type="submit" value="valider"></p> <!--bouton qui envoie à la page suivante-->
