@@ -13,9 +13,9 @@
 			if (($handle = fopen($path."messages_clients.csv", "r"))) {
 				while (($data = fgetcsv($handle, 1000, ","))) {
 					if($data[2] == 1)
-						echo '<button onclick=afficher_conversation("'.$data[0].'","'.$data[1].'")>'.$data[0].' '.$data[1].' Nouveau(x) message(s)</button>';
+						echo '<button onclick=afficher_conversation_r("'.$data[0].'","'.$data[1].'")>'.$data[0].' '.$data[1].' Nouveau(x) message(s)</button>';
 					else
-						echo '<button onclick=afficher_conversation("'.$data[0].'","'.$data[1].'")>'.$data[0].' '.$data[1].' Voir conversation</button>';
+						echo '<button onclick=afficher_conversation_r("'.$data[0].'","'.$data[1].'")>'.$data[0].' '.$data[1].' Voir conversation</button>';
 				}
 				fclose($handle);
 
