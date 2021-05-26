@@ -61,6 +61,8 @@
 							$tab[9],
 							$tab[10],
 							$tab[11],
+							$tab[0],
+							$tab[1],
 							$chemin."Justificatifs/justificatif".$i.".".$extension[$n-1]
 						);
 			
