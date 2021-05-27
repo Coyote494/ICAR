@@ -3,7 +3,7 @@
 	$_SESSION["nom"] = "Hubert";
 	$_SESSION["prenom"] = "Lucas";
 	$_SESSION["assurance"] = "Allianz";
-	$_SESSION["rang"] = "client";
+	$_SESSION["rang"] = "assure";
 ?>
 <!DOCTYPE html>
 <html lang = "fr">
