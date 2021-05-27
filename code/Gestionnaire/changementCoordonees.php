@@ -2,11 +2,16 @@
 <html>
 	<head>
 		<title>Changement de coordonées</title>	
+			<link rel="stylesheet" type="text/css" href="./CSS/changementCoordonnees.css" />
+			<link rel="stylesheet"type="text/css"  href="./CSS/style.php"  />
 	</head>
 	<body>
-		<h1>Demandes De Changement de Coordonées :</h1>
+	<div class="bandeau">
+		<img src="../img/logo.png">
+		<h1>Demande de changement de coordonées</h1>
+	</div>
+	<div class="container">
 		<?php
-		
 		displayRequest();
 		
 		function formEcho($a, $i){
@@ -14,7 +19,6 @@
 			echo "<input type='submit' name='ok' value='confirmer la demande ".$i."'><br>";
 			echo "</form>";
 		}
-
 		function displayRequest(){
 			$i = 1;
 			$new = fopen("../../database/Allianz"/*.$_SESSION['assurance'].*/."/demande_changement.csv", "a+");
@@ -44,5 +48,6 @@
 		}
 		
 		?>
+	</div>
 	</body>
 </html>

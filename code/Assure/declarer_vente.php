@@ -24,6 +24,9 @@
 		<img src="../img/logo.png">
 		<h2>Déclaration de vente</h4>
 	</div>
+	<div class="voiture-rtl">
+    	<div><img src="./img/voiture.png"></div>
+	</div>
 	<div class="container">
 		<div class="certificat">
 			<p>Voici un exemple vierge de certificat de cession : <a href="./documents_administratifs/cerfa_cession.pdf" target = "_blank">Déclaration_de_vente.pdf</a></p>

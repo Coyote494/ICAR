@@ -13,7 +13,8 @@
 		<div class="bandeau">
 			<img src="../img/logo.png">
         	<h2>Historique des sinistres</h2>
-        </div>		
+        </div>	
+        <div class="cadre">	
 		<?php
 			$path = "../../database/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/Sinistres";
 			function ScanDirectory($Directory){
@@ -34,10 +35,11 @@
 			ScanDirectory($path);
 		?>
 
+	</div>
 
 		<!-- bouton de déconnexion -->
 		<form method="POST" action="../deconnexion.php">
-			<input type="submit" name="OUT" value="Déconnexion"/>
+			<input type="submit" name="OUT" value="Déconnexion"class="bouton"/>
 		</form>
 
 	</body>
