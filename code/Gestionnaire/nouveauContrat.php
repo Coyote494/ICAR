@@ -16,9 +16,9 @@
     </div>
 
     <div class="formulaire">
-		<form action="creationCompte.php" method="POST" class="">
+		<form enctype="multipart/form-data" action="creationCompte.php" method="POST" class="">
 			<select name="genre" required>
-				<option>Mr</option>
+				<option>M.</option>
 				<option>Mme</option>
 			</select>
 			<p>Nom :<input type="text" name="nom" required></p>
@@ -31,6 +31,11 @@
 			<p>Numéro Portable : <input type="number" name="numero" required></p>
 			<p>Adresse Mail : <input type="email" name="mail" required></p>
 			<p>Numéro de contrat : <input type="number" name="numContrat" required></p>
+			<p>Carte grise :<br><input type="file" name="CG" required></p>
+			<p>Contrat d'assurance :<br><input type="file" name="CA" required></p>
+			<p>Carte verte :<br><input type="file" name="CV" required></p>
+			<p>Permis de conduire :<br><input type="file" name="permis" required></p>
+			<p>Justificatif de domicile :<br><input type="file" name="justificatif" required></p>
 			<input type="submit" value="ajouter" class="bouton">
 			<input type="reset" value="Réinitialiser" class="bouton">	
 		</form>
