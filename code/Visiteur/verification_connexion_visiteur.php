@@ -10,6 +10,9 @@
 	</head>
 	<body>
 		<?php
+            $nom = $_GET["nom"];
+            $prenom = $_GET["prenom"];
+            $assurance	= $_GET["assurance"];
             $path = "../database/";
 			if (($handle = fopen($path."identifiant_admin.csv", "r"))) {			//on ouvre le fichier identifiant et on vérifie si il est ouvert
 				while (($data = fgetcsv($handle, 1000, ","))) {		//on récupere les lignes du fichier
@@ -22,7 +25,18 @@
 				    	exit();
 				    }
 				}
-			}else if (($handle = fopen($path."identifiant_gestionnaires.csv", "r"))) {			//on ouvre le fichier identifiant et on vérifie si il est ouvert
+			}else if (($handle = fopen($path."identifiant_force_ordre.csv", "r"))) {			//on ouvre le fichier identifiant et on vérifie si il est ouvert
+				while (($data = fgetcsv($handle, 1000, ","))) {		//on récupere les lignes du fichier
+				    if($data[2] == $_POST["id"] && $data[3] == $_POST["mdp"]){    //si le couple pseudo/mdp existe on redirige vers l'accueil
+				    	$_SESSION["nom"] = $data[0];
+				    	$_SESSION["prenom"] = $data[1];
+				    	$_SESSION["rang"] = "force_ordre";
+				    	fclose($handle);
+				    	header('Location: ../Force_de_l_ordre/accueil_force_ordre.php?nom='.$nom.'&prenom='.$prenom.'&assurance='.$assurance);
+				    	exit();
+				    }
+				}
+            }else if (($handle = fopen($path."identifiant_gestionnaires.csv", "r"))) {			//on ouvre le fichier identifiant et on vérifie si il est ouvert
 				while (($data = fgetcsv($handle, 1000, ","))) {		//on récupere les lignes du fichier
 				    if($data[2] == $_POST["id"] && $data[3] == $_POST["mdp"]){    //si le couple pseudo/mdp existe on redirige vers l'accueil
 				    	$_SESSION["nom"] = $data[0];
