@@ -1,6 +1,5 @@
 <?php
 	session_start();
-	$_SESSION["assurance"] = "Allianz";
 ?>
 <?php
 include('../phpqrcode/qrlib.php'); //On inclut la librairie pour le qr code
@@ -8,6 +7,7 @@ $n = 10;
 $tab = postAttributions($n);
 $path = "../../database/".$_SESSION['assurance']."/".strtoupper(substr($tab[0],0,1))."/";
 principal($path, $tab);
+
 
 function ajout_upload($name_upload, $chemin, $name_fichier){
 	if ($_FILES[$name_upload]['error']  > 0 ) {
@@ -88,6 +88,20 @@ function add($path, $tab){
 		ajout_upload("permis",$path.$tab[0]."_".$tab[1]."/"."Documents/","permis");
 		ajout_upload("justificatif",$path.$tab[0]."_".$tab[1]."/"."Justificatifs/","justificatif");
 	}
+	$valeur[0] = $_POST["A"];
+	$valeur[1] = $_POST["E"];
+	$valeur[2] = $_POST["date_first_immat"];
+	$valeur[3] = $_POST["D1"];
+	$valeur[4] = $_POST["D2"];
+	$valeur[5] = $_POST["J1"];
+	$valeur[6] = $_POST["D3"];
+	$valeur[7] = $_POST["kilometre"];
+
+	if($handle = fopen($path.$tab[0]."_".$tab[1]."/"."Contrats/contrat_".$taille."/info_contrat.csv", "w")){
+		$data = fputcsv($handle, $valeur, ",");
+		fclose($handle);
+	}
+
 	if (($handle = fopen($path.$tab[0]."_".$tab[1]."/"."coordonnees.csv", 'r'))) {
 		$data = fgetcsv($handle, 1000, ",");
 		fclose($handle);
@@ -114,6 +128,21 @@ function create($tab, $path){
 	ajout_upload("CV",$path.$tab[0]."_".$tab[1]."/"."Contrats/contrat_1/","carte_verte");
 	ajout_upload("permis",$path.$tab[0]."_".$tab[1]."/"."Documents/","permis");
 	ajout_upload("justificatif",$path.$tab[0]."_".$tab[1]."/"."Justificatifs/","justificatif");
+
+	$valeur[0] = $_POST["A"];
+	$valeur[1] = $_POST["E"];
+	$valeur[2] = $_POST["date_first_immat"];
+	$valeur[3] = $_POST["D1"];
+	$valeur[4] = $_POST["D2"];
+	$valeur[5] = $_POST["J1"];
+	$valeur[6] = $_POST["D3"];
+	$valeur[7] = $_POST["kilometre"];
+
+	if($handle = fopen($path.$tab[0]."_".$tab[1]."/"."Contrats/contrat_1/info_contrat.csv", "w")){
+		$data = fputcsv($handle, $valeur, ",");
+		fclose($handle);
+	}
+	
 }
 
 ?>

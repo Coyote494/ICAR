@@ -1,7 +1,7 @@
 <?php
 	session_start();
-	$_SESSION["nom"] = "Hubert";
-	$_SESSION["prenom"] = "Lucas";
+	$_SESSION["nom"] = "Baucor";
+	$_SESSION["prenom"] = "Victor";
 	$_SESSION["assurance"] = "Allianz";
 	$_SESSION["rang"] = "assure";
 ?>

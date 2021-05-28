@@ -32,19 +32,33 @@
 		<form method="POST" action="../deconnexion.php">
 		    <input type="submit" name="OUT" value="Déconnexion" class="bouton" />
 		</form>
-
+		<div id = contrats>
+		<?php
+			$Directory = "../../database/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/Contrats";
+			$MyDirectory = opendir($Directory) or die('Erreur');
+			 while(false != ($Entry = readdir($MyDirectory))) {
+				 if(is_dir($Directory.'/'.$Entry)&& $Entry != '.' && $Entry != '..') {
+					if($handle = fopen($Directory.'/'.$Entry.'/info_contrat.csv', "r")){
+						$data = fgetcsv($handle, 1000, ",");
+						fclose($handle);
+					}
+					echo "<div>";
+					echo "<strong>Contrat ".$Entry[8]."</strong><br>";
+					echo "<br>Marque :".$data[3];
+					echo "<br>Modèle :".$data[4];
+					echo "<br>Immatriculation :".$data[0];
+					echo "<br>Kilomètrage :".$data[7];
+					echo "</div>";
+				}
+			}
+			closedir($MyDirectory);
+		?>
+		</div>
 		<?php
 			if (isset($_GET["change_mdp"]) && $_GET["change_mdp"] == "success") {
             	echo "<script>alert('Mot de passe modifié avec succès !');</script>" ;
 			}   
 		?>
-		
-       <!--  <p><a href='declarer_sinistre.php' class='lien'>Déclarer un sinistre</a></p>
-        <p><a href='changement_coord.php' class='lien'>Déclarer un changement de coordonnées</a></p>
-        <p><a href='historique_sinistres.php' class='lien'>Consulter l'historique des sinistres</a></p>
-        <p><a href='declarer_vente.php' class='lien'>Déclarer de vente/cession</a></p>
-        <div>Mes contrats</div>
-        <div>Contact et infos</div> -->
 
         <div id="messagerie">
         	<img src="./img/discussion.png" onclick="afficher_messagerie()" width="50px" height="30px">
