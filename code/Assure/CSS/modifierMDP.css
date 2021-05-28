@@ -29,3 +29,41 @@
     padding: 10px 20px;
     border-radius: 5px;
 }
+.voiture-rtl{
+  overflow: hidden; /* important */
+ 
+ }
+
+
+.voiture-rtl img{​​​​​​​
+  width: 100%;
+  height: 100%; 
+}
+
+
+.voiture-rtl > div {
+  display: inline-block; /* important */
+  white-space: nowrap; /* important */
+  animation: defilement-rtl 6s infinite linear; /* défilement */
+  cursor: pointer;
+  padding: 10px 2em 10px 100%;
+}
+
+
+
+.voiture-rtl > div:first-letter {
+  font-weight: 700;
+  color: #F00;
+}
+
+@keyframes defilement-rtl {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+  100% {
+    -webkit-transform: translate(-100%);
+    transform: translate(-100%);
+  }
+}
+
