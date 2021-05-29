@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -10,6 +14,7 @@
 			</div>
 			<div>
 				<a href="rechercherContrat.php">Rechercher un contract</a>
+				<p>En recherchant un client vous pouvez consulter ses sinistres ainsi que tout ses autres documents</p>
 			</div>
 			<div>
 				<a href="nouveauContrat.php">Nouveau contract</a>
@@ -22,6 +27,10 @@
 				<a href="#">signaler un problème<a>
 			</div>
 		</div>
+			<!-- bouton de déconnexion -->
+		<form method="POST" action="../deconnexion.php">
+			<input type="submit" name="OUT" value="Déconnexion" class="bouton"/>
+		 </form>
 		 <iframe src="liste_message.php" width="300" height="400"></iframe>
 	</body>
 </html>

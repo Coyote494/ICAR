@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -35,5 +38,9 @@
 			<input type="reset" value="Réinitialiser" class="bouton">	
 		</form>
 	</div>
+		<!-- bouton de déconnexion -->
+	<form method="POST" action="../deconnexion.php">
+		<input type="submit" name="OUT" value="Déconnexion" class="bouton"/>
+	</form>
 	</body>
 </html>
