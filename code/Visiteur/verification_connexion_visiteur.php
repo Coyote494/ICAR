@@ -21,6 +21,12 @@
 				    	$_SESSION["prenom"] = $data[1];
 				    	$_SESSION["rang"] = "administrateur";
 				    	fclose($handle);
+				    	if (($handle = fopen("../../database/logs.csv", "a"))) {	
+				    		date_default_timezone_set('Europe/Paris');
+							$donnes = array(date('d-m-y h:i:s'), "L'administrateur ".$_SESSION["nom"]." ".$_SESSION["prenom"]." s'est connecté.");
+							fputcsv($handle, $donnes, ',');
+							fclose($handle);
+						} 
 				    	header('Location: ../Admin/admin.php');
 				    	exit();
 				    }
@@ -32,6 +38,12 @@
 				    	$_SESSION["prenom"] = $data[1];
 				    	$_SESSION["rang"] = "force_ordre";
 				    	fclose($handle);
+				    	if (($handle = fopen("../../database/logs.csv", "a"))) {	
+				    		date_default_timezone_set('Europe/Paris');
+							$donnes = array(date('d-m-y h:i:s'), "La force de l'ordre ".$_SESSION["nom"]." ".$_SESSION["prenom"]." s'est connecté.");
+							fputcsv($handle, $donnes, ',');
+							fclose($handle);
+						}
 				    	header('Location: ../Force_de_l_ordre/accueil_force_ordre.php?nom='.$nom.'&prenom='.$prenom.'&assurance='.$assurance);
 				    	exit();
 				    }
@@ -44,6 +56,12 @@
 				    	$_SESSION["rang"] = "gestionnaire";
                         $_SESSION["assurance"] = $data[4];
 				    	fclose($handle);
+				    	if (($handle = fopen("../../database/logs.csv", "a"))) {	
+				    		date_default_timezone_set('Europe/Paris');
+							$donnes = array(date('d-m-y h:i:s'), "Le gestionnaire ".$_SESSION["nom"]." ".$_SESSION["prenom"]." s'est connecté.");
+							fputcsv($handle, $donnes, ',');
+							fclose($handle);
+						}
 				    	header('Location: ../Gestionnaire/gestionnaire.php');
 				    	exit();
 				    }
@@ -61,6 +79,12 @@
 							    	$_SESSION["rang"] = "assure";
 			                        $_SESSION["assurance"] = $Entry;
 							    	fclose($handle);
+							    	if (($handle = fopen("../../database/logs.csv", "a"))) {	
+							    		date_default_timezone_set('Europe/Paris');
+										$donnes = array(date('d-m-y h:i:s'), "L'assuré' ".$_SESSION["nom"]." ".$_SESSION["prenom"]." s'est connecté.");
+										fputcsv($handle, $donnes, ',');
+										fclose($handle);
+									}
 							    	header('Location: ../Assure/accueil_assure.php');
 							    	exit();
 							    }
@@ -70,7 +94,7 @@
 			 	}
 			  	closedir($MyDirectory);
 			}
-			header('Location: ../Gestion/connexion.php?erreur=mdp');			//cas où le pseudo/mdp est erroné.
+			header('Location: ./visiteur.php?erreur=mdp');			//cas où le pseudo/mdp est erroné.
 			exit();
 		?>
 	</body>

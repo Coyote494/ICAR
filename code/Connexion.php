@@ -24,7 +24,7 @@
 
 	<div>
 		<?php
-			if (isset($_GET["error"])) {
+			if (isset($_GET["erreur"])) {
 				echo "Vous vous êtes trompé(e)s";
 			}
 			if (isset($_POST["OUT"])){

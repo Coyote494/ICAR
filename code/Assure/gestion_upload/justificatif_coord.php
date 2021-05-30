@@ -32,7 +32,12 @@
 			  	$res = move_uploaded_file( 
 			        $_FILES['fileToUpload']['tmp_name'], 
 			        $path."justificatif".$i.".".$extension[$n-1]);
-			  	if($res){
+			  	if($res){if (($handle = fopen("../../../database/logs.csv", "a"))) {	
+			    		date_default_timezone_set('Europe/Paris');
+						$donnes = array(date('d-m-y h:i:s'), "L'assuré ".$_SESSION["nom"]." ".$_SESSION["prenom"]." a déclaré un changement de coordonnées.");
+						fputcsv($handle, $donnes, ',');
+						fclose($handle);
+					}
                     header('Location: ../changement_coord.php?upload=sucess');
 			  		exit();
 			  	}else{

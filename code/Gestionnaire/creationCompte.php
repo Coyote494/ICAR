@@ -38,8 +38,21 @@ function ajout_upload($name_upload, $chemin, $name_fichier){
 function principal($path, $tab){
 	if(file_exists($path.$tab[0]."_".$tab[1]."/"."coordonnees.csv")){
 		add($path, $tab);
+		if (($handle = fopen("../../database/logs.csv", "a"))) {	
+    		date_default_timezone_set('Europe/Paris');
+			$donnes = array(date('d-m-y h:i:s'), "Le gestionnaire ".$_SESSION["nom"]." ".$_SESSION["prenom"]." a ajouté un nouveau contrat au nom de ".$_POST["nom"]." ".$_POST["prenom"]."0");
+			fputcsv($handle, $donnes, ',');
+			fclose($handle);
+		} 
 	}else{
 		create($tab, $path);
+		if (($handle = fopen("../../database/logs.csv", "a"))) {	
+    		date_default_timezone_set('Europe/Paris');
+			$donnes = array(date('d-m-y h:i:s'), "Le gestionnaire ".$_SESSION["nom"]." ".$_SESSION["prenom"]." a ajouté un nouveau contrat au nom de ".$_POST["nom"]." ".$_POST["prenom"]."0");
+			fputcsv($handle, $donnes, ',');
+			fclose($handle);
+		}
+
 	}
 	header('Location: nouveauContrat.php');
 	exit();
