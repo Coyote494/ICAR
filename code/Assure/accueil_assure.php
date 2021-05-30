@@ -64,6 +64,9 @@
         <div id="messagerie">
         	<a href="messagerie.php">Accès messagerie</a>
         </div>
+        <div>
+        	<a href="./signaler.php">Signaler un problème</a>
+        </div>
         <script type="text/javascript" src="./JS/accueil_assure.js"></script>
         <!-- <iframe src="messagerie.php" width="300" height="400"></iframe> -->
 	</body>

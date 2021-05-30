@@ -28,7 +28,7 @@
 		</form>
 	</fieldset>
 	<fieldset>
-		<legend><strong>Ajouter un nouveau gestionnaire </strong></legend>>
+		<legend><strong>Ajouter un nouveau gestionnaire </strong></legend>
 		<form action='newGestionnaire.php' method='POST'>
 			Choisissez l'assurance :
 			<select name="assurance" required>
@@ -54,7 +54,7 @@
 	</fieldset>
 	
 	<fieldset>
-		<legend>Ajouter une nouvelle force de l'ordre :</legend>
+		<legend><strong>Ajouter une nouvelle force de l'ordre </strong></legend>
 		<form action='newForce.php' method='POST'>
 			<label for="nom">Nom de la force de l'ordre :</label>
 			<input name="nom" placeholder="Entrez le nom" required=""><br>
@@ -65,6 +65,7 @@
 			<input type="submit" value="Ajouter" class="bouton">
 		</form>
 	</fieldset>
+<<<<<<< HEAD
 		<fieldset>
 		<div id = "logs">
 		<legend>Logs</legend>
@@ -78,6 +79,15 @@
 				}
 			?>
 		
+=======
+	<fieldset>
+		<legend>Logs</legend>
+		<iframe src="logs.php" width="1200" height="400" style="border:none;"></iframe>
+	</fieldset>
+	<fieldset>
+		<legend>Problèmes signalés</legend>
+		<iframe src="problemes.php" width="1200" height="400" style="border:none;"></iframe>
+>>>>>>> ebdddd183655837115b32a119bdb14192ce0a567
 	</fieldset>
 	</div>
 	</body>

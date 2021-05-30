@@ -19,8 +19,8 @@ session_start();
     	</div>
 
 		<div class="formulaire">
-			<p>Nom :<input type="text" id="nom" name="nom" required></p>
-			<p>Prénom :<input type="text" id="prenom" name="prenom" required></p>
+			<p>Nom :<input type="text" id="nom" name="nom"></p>
+			<p>Prénom :<input type="text" id="prenom" name="prenom"></p>
 			<p>Téléphone :<input type="number" id="tel" name="tel"></p>
 			<p>Adresse mail :<input type="email" id="email" name="email"></p>
 			<p>Numéro de Contract :<input type="number" id="numero" name="numero"></p>

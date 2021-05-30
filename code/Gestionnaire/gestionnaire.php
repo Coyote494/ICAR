@@ -26,12 +26,21 @@ session_start();
 				<p> Créer un nouveau contrat</p>
 				<a href="nouveauContrat.php">Nouveau contrat</a>
 			</div>
+<<<<<<< HEAD
 			<div class="gerer">
 				<p>Gérer les demandes</p>
 				<a href="changementCoordonees.php">Changement de coordonnées</a></br></br>
 				<a href="#">Cession d'un véhicule</a></br></br>
 				<a href="#">Sinistres</a></br></br>
 				<a href="#">Signaler un problème</a></br>
+=======
+			<div>
+				Gérer les demandes
+				<a href="changementCoordonees.php">changement de coordonées<a>
+				<a href="#">cession d'un véhicule<a>
+				<a href="#">sinistres<a>
+				<a href="signaler.php">signaler un problème<a>
+>>>>>>> ebdddd183655837115b32a119bdb14192ce0a567
 			</div>
 	</div>
 			<div class="liste_message">
