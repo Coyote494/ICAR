@@ -32,7 +32,7 @@
 				fputcsv($handle, $donnes, ',');
 				fclose($handle);
 			} 
-			mail($_POST["mail"], "Bienvenue sur Icar", "Votre mot de passe est le suivant : ".$mdp)
+			mail($_POST["mail"], "Bienvenue sur Icar", "Votre mot de passe est le suivant : ".$mdp);
 			header('Location: admin.php');
 		?>
 	</body>

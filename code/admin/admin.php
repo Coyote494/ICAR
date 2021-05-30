@@ -28,7 +28,7 @@
 		</form>
 	</fieldset>
 	<fieldset>
-		<legend><strong>Ajouter un nouveau gestionnaire </strong></legend>>
+		<legend><strong>Ajouter un nouveau gestionnaire </strong></legend>
 		<form action='newGestionnaire.php' method='POST'>
 			Choisissez l'assurance :
 			<select name="assurance" required>
@@ -50,12 +50,9 @@
 			<input name="mail" placeholder="Entrez le mail" required=""><br>
 			<input type="submit" value="Ajouter" class="bouton">
 		</form>
-<<<<<<< HEAD
 	</fieldset>
 	<fieldset>
-		<legend>Logs</legend>
-=======
-		<h1>Ajouter une nouvelle force de l'ordre :</h1>
+		<legend><strong>Ajouter une nouvelle force de l'ordre </strong></legend>
 		<form action='newForce.php' method='POST'>
 			<label for="nom">Nom de la force de l'ordre :</label>
 			<input name="nom" placeholder="Entrez le nom" required=""><br>
@@ -65,20 +62,9 @@
 			<input name="mail" placeholder="Entrez le mail" required=""><br>
 			<input type="submit" value="Ajouter" class="bouton">
 		</form>
+	</fieldset>
 		<h1>Logs</h1>
->>>>>>> d16a782914f6cbcdbb41ded7fa7b576c3c716e57
-		<div id = "logs">
-			<?php
-				$path = "../../database/logs.csv";
-				if (($handle = fopen($path, 'r'))) {
-					while($data = fgetcsv($handle, 1000, ",")){
-						echo "<p>[".$data[0]."] ".$data[1]."</p>";
-					}
-					fclose($handle);
-				}
-			?>
-		</div>
-		</fieldset>
+		<iframe src="logs.php" width="1200" height="400"></iframe>
 	</body>
 			<!-- bouton de déconnexion -->
 		<div class="deconnexion">
