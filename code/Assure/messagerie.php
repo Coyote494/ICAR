@@ -14,7 +14,7 @@
 			if (($handle = fopen($path."discussion.csv", "r"))) {
 				while (($data = fgetcsv($handle, 1000, ","))) {
 					if($data[0] == "assure"){
-						echo "<div class = 'asssure'>".$data[1]."</div>";
+						echo "<div class = 'assure'>".$data[1]."</div>";
 					}else{
 						echo "<div class = 'gestionnaire'>".$data[1]."</div>";
 					}

@@ -42,6 +42,7 @@ session_start();
 
 
 	<div class="milieu">
+		<img src="img/fond1.png">
 	</div>
 
 	<div class="pq">

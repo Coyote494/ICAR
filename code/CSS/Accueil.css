@@ -3,58 +3,58 @@ body{
 }
 
 .conteneur{
-	display: flex;
-	width: 100%;
-	flex-direction: row;
-	justify-content: space-between;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
   border-radius: 20px;
 }
 
 
 .conteneur > div{
-	 margin: 10px;
-	 padding: 20px;
+   margin: 10px;
+   padding: 20px;
  }
 
 
 #header img{
-	margin-left: 10px;
-	height: 100px;
+  margin-left: 10px;
+  height: 100px;
 }
 
 
 #info{
-	font-size:25px;
-	width: 50%;
-	background-color: transparent;
+  font-size:25px;
+  width: 50%;
+  background-color: transparent;
   text-align: center;
 
 }
 
 
 .button:hover{
-	background-color: white;
-	color: #2e7d32; 
-	border-radius:12px;
-	border: 2px solid #2e7d32;
-	font-size:16px;
-	padding: 15px;
+  background-color: white;
+  color: #2e7d32; 
+  border-radius:12px;
+  border: 2px solid #2e7d32;
+  font-size:16px;
+  padding: 15px;
 
 }
 
 
 .button {
   transition-duration: 0.2s;
-	background-color: #2e7d32;
-	color:white;
-	border-radius:12px;
-	border: 2px solid white;
-	font-size:16px;
-	padding: 15px;
+  background-color: #2e7d32;
+  color:white;
+  border-radius:12px;
+  border: 2px solid white;
+  font-size:16px;
+  padding: 15px;
 }
 
 .inf img{
-	height: 50px;
+  height: 50px;
 }
 
 .inf span {
@@ -66,9 +66,9 @@ body{
 }
 
 .reseau{
-	display: flex;
-	justify-content: center;
-	flex-direction: row;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
 }
 .reseau:before, 
 
@@ -79,8 +79,8 @@ border-bottom: 1px solid #000;
 margin: auto; 
 } 
 .reseau img{
-	width: 30px;
-	padding: 3px;
+  width: 30px;
+  padding: 3px;
 }
 
 
@@ -112,13 +112,10 @@ margin: auto;
 }
 
 .milieu{
-	text-align: center;
-	color:red;
+  text-align: center;
+  color:red;
   background-color: #dcd9d9;
-  background-image: url(img/fond1.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  padding: 250px;
+  padding: 0px;
 }
 
 .pq{
@@ -128,19 +125,19 @@ margin: auto;
 }
 
 #choix{
-	display: flex;
-	width: 100%;
-	flex-direction: row;
-	background-color: white;
-	justify-content: space-around;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  background-color: white;
+  justify-content: space-around;
 }
 
 
 .bas {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
   background-color: #424242;
   color:white;
 }
@@ -165,8 +162,8 @@ margin: auto;
 }
 
  .contact  p img{
- 	vertical-align: middle;
- 	width: 20px;
+  vertical-align: middle;
+  width: 20px;
   display: flex;
   flex-direction: column;
   float: left;
@@ -236,14 +233,14 @@ input[type=submit]:hover {
   background-image:  url(img/Attention.png);
   background-repeat: no-repeat;
   background-position: center;
-  width: 1650px;
+  width: 1650px
   height:500px;
 
  }
 
 
 .covid-rtl img{​​​​​​​
-  background-image: url("img/Attention.png");
+  background-image:  url(img/Attention.png);
   background-repeat: no-repeat;
   width: 100px;
   opacity: 0.7; 

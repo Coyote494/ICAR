@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Changement de coordonées</title>	
+		<title>Changement de coordonnées</title>	
 			<link rel="stylesheet" type="text/css" href="./CSS/changementCoordonnees.css" />
 			<link rel="stylesheet"type="text/css"  href="./CSS/style.php"  />
 	</head>
 	<body>
 	<div class="bandeau">
 		<img src="../img/logo.png">
-		<h1>Demande de changement de coordonées</h1>
+		<h1>Demande de changement de coordonnées</h1>
 	</div>
-	<div class="container">
+
+		<fieldset><
 		<?php
 		displayRequest();
 		
@@ -32,7 +33,8 @@
 					echo "<a href=".$new_content[6]." target='_blank'>voir le justificatif</a><br>";
 					formEcho(1, $i);
 					fclose($old);
-				}else{
+				}
+				else{
 					echo "<p>Demande de changement de coordonnées</p>";
 					$old = fopen("../../database/Allianz"/*.$_SESSION['assurance']*/."/".strtoupper(substr($new_content[1],0,1))."/".$new_content[1]."_".$new_content[2]."/coordonnees.csv", "r");
 					$old_content = fgetcsv($old);
@@ -48,6 +50,7 @@
 		}
 		
 		?>
+	</fieldset>
 	</div>
 	</body>
 </html>
