@@ -22,5 +22,8 @@ session_start();
 				fclose($handle);
 			} 
 		?>
+		<?php
+			header('Location: gestionnaire.php');
+		?>
 	</body>
 </html>

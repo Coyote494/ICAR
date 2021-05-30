@@ -22,5 +22,8 @@ session_start();
 				fclose($handle);
 			} 
 		?>
+		<?php
+			header('Location: accueil_assure.php');
+		?>
 	</body>
 </html>

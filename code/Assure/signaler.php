@@ -16,8 +16,5 @@ session_start();
 				<input type="submit" value="Signaler" class="bouton">
 			</form>
 		</fieldset>
-		<?php
-			header('Location: accueil_assure.php');
-		?>
 	</body>
 </html>

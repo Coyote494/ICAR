@@ -16,8 +16,5 @@ session_start();
 				<input type="submit" value="Signaler" class="bouton">
 			</form>
 		</fieldset>
-		<?php
-			header('Location: gestionnaire.php');
-		?>
 	</body>
 </html>
