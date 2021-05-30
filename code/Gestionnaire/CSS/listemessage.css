@@ -1,0 +1,63 @@
+#saisie{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#mon_message{
+    color: black;
+    padding: 20px;
+
+    
+}
+
+button{
+    background-color: grey;
+}
+
+.bandeau{
+    text-align: center;
+    font-family: "Karma", sans-serif
+}
+
+.bandeau img{
+    height: 60px;
+}
+
+#conversation{
+    border: 2px solid grey;
+    border-radius:12px;
+    text-align: center;
+    background-color: white;
+    padding:20px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 2%;
+    height: 600px;
+    overflow: scroll;
+}
+
+#liste_message{
+  text-align: center;
+}
+
+
+.gestionnaire{
+    border: 2px solid white;
+    border-radius:12px;
+    color: white;
+    padding:10px;
+    margin-left: 90%;
+    background-color: #8fc1a9;
+
+
+}
+
+.assure{
+    border: 2px solid white;
+    border-radius:12px;
+    color: black;
+    padding:10px;
+    margin-right: 90%;
+    background-color: #f7e37b;
+}

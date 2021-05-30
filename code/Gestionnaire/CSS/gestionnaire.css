@@ -1,0 +1,101 @@
+.bandeau{
+  text-align: center;
+  font-family: "Karma", sans-serif
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 20px;
+}
+
+img{
+  height: 60px;
+}
+
+.donnees{
+  border:solid;
+  border-radius: 8px;
+  border-color: #2e7d32;
+  margin-right: 3%;
+  background-color: #fafafa;
+  font-family: 'Noto Sans JP', sans-serif;
+  padding: 7px;
+}
+
+.deconnexion{
+  text-align: center;
+}
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-radius: 5px;
+  border:solid black;
+  padding: 50px;
+}
+
+.contrat, .nouveauContrat, .gerer{
+  border:solid;
+  border-radius: 8px;
+  border-color: #2e7d32;
+  margin-right: 2%;
+  font-family: 'Noto Sans JP', sans-serif;
+  padding:10px;
+}
+
+.liste_message{
+  height: 850px;
+  font-family: 'Noto Sans JP', sans-serif;
+  padding:10px;
+}
+
+ 
+
+.bouton{
+  background-color: #2e7d32;
+    color:white;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.voiture-rtl{
+  overflow: hidden; /* important */
+ 
+ }
+
+
+.voiture-rtl img{​​​​​​​
+  height: 60px; 
+}
+
+
+.voiture-rtl > div {
+  display: inline-block; /* important */
+  white-space: nowrap; /* important */
+  animation: defilement-rtl 6s infinite linear; /* défilement */
+  cursor: pointer;
+  padding: 10px 2em 10px 100%;
+}
+
+
+
+.voiture-rtl > div:first-letter {
+  font-weight: 700;
+  color: #F00;
+}
+
+@keyframes defilement-rtl {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+  100% {
+    -webkit-transform: translate(-100%);
+    transform: translate(-100%);
+  }
+}
+
+iframe{
+  height: 100%;
+  width: 100%;
+  border:white; 
+
+}

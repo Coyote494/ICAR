@@ -6,31 +6,45 @@ session_start();
 <html>
 	<head>
 		<title>Gestionnaire</title>
+		<link rel="stylesheet" type="text/css" href="./CSS/gestionnaire.css" />
 	</head>
 	<body>
-		<div>
-			<div>
-				I - CAR
-			</div>
-			<div>
+	<div class="bandeau"> 
+		<img src="../img/logo.png">
+        <h2>Bienvenue sur votre page gestionnaire</h2>
+    </div>
+
+    <div class="voiture-rtl">
+        <div><img src="img/voiture.png"></div>
+    </div>
+    <div class="container">
+    		<div class="contrat">
 				<a href="rechercherContrat.php">Rechercher un contract</a>
-				<p>En recherchant un client vous pouvez consulter ses sinistres ainsi que tout ses autres documents</p>
+				<p>En recherchant un client vous pouvez consulter ses sinistres ainsi que tous ses autres documents</p>
 			</div>
-			<div>
-				<a href="nouveauContrat.php">Nouveau contract</a>
+			<div class="nouveauContrat">
+				<p> Créer un nouveau contrat</p>
+				<a href="nouveauContrat.php">Nouveau contrat</a>
 			</div>
-			<div>
-				Gérer les demandes
-				<a href="changementCoordonees.php">changement de coordonées<a>
-				<a href="#">cession d'un véhicule<a>
-				<a href="#">sinistres<a>
-				<a href="#">signaler un problème<a>
+			<div class="gerer">
+				<p>Gérer les demandes</p>
+				<a href="changementCoordonees.php">Changement de coordonnées</a></br></br>
+				<a href="#">Cession d'un véhicule</a></br></br>
+				<a href="#">Sinistres</a></br></br>
+				<a href="#">Signaler un problème</a></br>
 			</div>
+	</div>
+			<div class="liste_message">
+			<p>Consultez vos messages</p>
+		 <iframe src="liste_message.php" width="300" height="400"></iframe>
 		</div>
+	
+
 			<!-- bouton de déconnexion -->
+			<div class="deconnexion">
 		<form method="POST" action="../deconnexion.php">
 			<input type="submit" name="OUT" value="Déconnexion" class="bouton"/>
 		 </form>
-		 <iframe src="liste_message.php" width="300" height="400"></iframe>
+
 	</body>
 </html>

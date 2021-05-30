@@ -11,10 +11,14 @@
 			<link rel="stylesheet"type="text/css"  href="./CSS/style.php"  />
 	</head>
 	<body>
-	<div class="bandeau">
+	<div class="bandeau"> 
 		<img src="../img/logo.png">
-		<h1>Demande de changement de coordonnées</h1>
-	</div>
+        <h2>Bienvenue sur votre page administrateur</h2>
+    </div>
+
+    <div class="voiture-rtl">
+        <div><img src="img/voiture.png"></div>
+    </div>
 
 		<fieldset><
 		<?php

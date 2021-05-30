@@ -5,6 +5,7 @@
 <html lang = "fr">
 	<head>
 		<title>Messagerie</title>
+		<link rel="stylesheet" type="text/css" href="./CSS/listemessage.css" />
 		<meta charset="utf-8">
 	</head>
 	<body>

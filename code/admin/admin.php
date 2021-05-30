@@ -65,9 +65,9 @@
 			<input type="submit" value="Ajouter" class="bouton">
 		</form>
 	</fieldset>
-	<fieldset>
-		<legend>Logs</legend>
+		<fieldset>
 		<div id = "logs">
+		<legend>Logs</legend>
 			<?php
 				$path = "../../database/logs.csv";
 				if (($handle = fopen($path, 'r'))) {
@@ -77,8 +77,9 @@
 					fclose($handle);
 				}
 			?>
-		</div>
+		
 	</fieldset>
+	</div>
 	</body>
 			<!-- bouton de déconnexion -->
 		<div class="deconnexion">
