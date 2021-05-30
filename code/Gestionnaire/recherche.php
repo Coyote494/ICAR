@@ -5,20 +5,40 @@ if (!isset($_SESSION["nom"])) {
     exit();
 }
 
-$first = strtoupper(substr($nom,0,1));
-
 $nom = $_POST["nom"];
 $prenom = $_POST["prenom"];
 $tel = $_POST["tel"];
-$email = $_POST["email"];
 $numero = $_POST["numero"];
+$email = $_POST["email"];
 
-$path = "../../database/".$_SESSION['assurance']."/".$first."/".$nom."_".$prenom."/";
-displayInfo($path);
-ScanDirectory($path."/Contrats");
-ScanDirectory($path."/Sinistres");
-ScanDirectory($path."/Documents");
-ScanDirectory($path."/Justificatifs");
+$path = "../../database/".$_SESSION['assurance']."/";
+$verif = True;
+if($handle = fopen($path."liste_clients.csv", "r")){
+	while($data = fgetcsv($handle, 1000, ',') and $verif == True){
+		if( ($data[0] == $nom && $data[1] == $prenom) || $data[4] == $tel || $data[5] == $email || $data[6] == $numero){
+			$nom = $data[0];
+			$prenom = $data[1];
+			$tel = $data[4];
+			$email = $data[5];
+			$numero = $data[6];
+			$verif = False;
+		}
+	}	
+	fclose($handle);
+}
+
+$first = strtoupper(substr($nom,0,1));
+$path =$path.$first."/".$nom."_".$prenom."/";
+
+if($verif == False){
+	displayInfo($path);
+	ScanDirectory($path."Contrats");
+	ScanDirectory($path."Sinistres");
+	ScanDirectory($path."Documents");
+	ScanDirectory($path."Justificatifs");
+}else{
+	echo "Aucun contrat trouvé avec les informations fournies.";
+}
 
 
 	function displayInfo($path){

@@ -25,9 +25,16 @@ if (!isset($_SESSION["nom"])) {
 				fputcsv($handle, $donnes, ',');
 				fclose($handle);
 			} 
+<<<<<<< HEAD
 		?>			<!-- bouton de déconnexion -->
 	<form method="POST" action="../deconnexion.php">
 		<input type="submit" name="OUT" value="Déconnexion" class="bouton"/>
 	</form>
+=======
+		?>
+		<?php
+			header('Location: gestionnaire.php');
+		?>
+>>>>>>> ca739a752ba6e2155987376cdd692101f8255ea8
 	</body>
 </html>

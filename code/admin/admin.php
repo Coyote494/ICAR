@@ -73,6 +73,21 @@ if (!isset($_SESSION["nom"])) {
 			<input type="submit" value="Ajouter" class="bouton">
 		</form>
 	</fieldset>
+<<<<<<< HEAD
+		<fieldset>
+		<div id = "logs">
+		<legend>Logs</legend>
+			<?php
+				$path = "../../database/logs.csv";
+				if (($handle = fopen($path, 'r'))) {
+					while($data = fgetcsv($handle, 1000, ",")){
+						echo "<p>[".$data[0]."] ".$data[1]."</p>";
+					}
+					fclose($handle);
+				}
+			?>
+		
+=======
 	<fieldset>
 		<legend>Logs</legend>
 		<iframe src="logs.php" width="1200" height="400" style="border:none;"></iframe>
@@ -80,7 +95,9 @@ if (!isset($_SESSION["nom"])) {
 	<fieldset>
 		<legend>Problèmes signalés</legend>
 		<iframe src="problemes.php" width="1200" height="400" style="border:none;"></iframe>
+>>>>>>> ebdddd183655837115b32a119bdb14192ce0a567
 	</fieldset>
+	</div>
 	</body>
 			<!-- bouton de déconnexion -->
 		<div class="deconnexion">

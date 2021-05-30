@@ -20,11 +20,14 @@ if (!isset($_SESSION["nom"])) {
 				<input type="submit" value="Signaler" class="bouton">
 			</form>
 		</fieldset>
+<<<<<<< HEAD
 		<?php
 			header('Location: accueil_assure.php');
 		?>
 		<form method="POST" action="../deconnexion.php">
 		    <input type="submit" name="OUT" value="Déconnexion" class="bouton" />
 		</form>
+=======
+>>>>>>> ca739a752ba6e2155987376cdd692101f8255ea8
 	</body>
 </html>

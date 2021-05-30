@@ -9,6 +9,10 @@ img{
 	height: 60px;
 }
 
+#logs{
+  background-color: black;
+  color: white;
+}
 fieldset {
   margin-bottom: 15px;
   padding: 10px;

@@ -156,10 +156,15 @@ function create($tab, $path){
 	$valeur[7] = $_POST["kilometre"];
 
 	if($handle = fopen($path.$tab[0]."_".$tab[1]."/"."Contrats/contrat_1/info_contrat.csv", "w")){
-		$data = fputcsv($handle, $valeur, ",");
+		fputcsv($handle, $valeur, ",");
 		fclose($handle);
 	}
-	
+
+	if($handle = fopen("../../database/".$_SESSION["assurance"]."/liste_clients.csv", "a")){
+		$data = array($tab[0], $tab[1], $tab[2], $tab[3], $tab[10], $tab[11], $tab[12]);
+		fputcsv($handle, $data, ",");
+		fclose($handle);
+	}	
 }
 
 ?>
