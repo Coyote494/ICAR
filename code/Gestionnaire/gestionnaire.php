@@ -24,7 +24,7 @@ session_start();
 				<a href="changementCoordonees.php">changement de coordonées<a>
 				<a href="#">cession d'un véhicule<a>
 				<a href="#">sinistres<a>
-				<a href="#">signaler un problème<a>
+				<a href="signaler.php">signaler un problème<a>
 			</div>
 		</div>
 			<!-- bouton de déconnexion -->
