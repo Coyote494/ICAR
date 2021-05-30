@@ -16,5 +16,11 @@ session_start();
 				<input type="submit" value="Signaler" class="bouton">
 			</form>
 		</fieldset>
+		<!-- bouton de déconnexion -->
+	    <div id="deconnexion">
+			<form method="POST" action="../deconnexion.php">
+			    <input type="submit" name="OUT" value="Déconnexion" class="bouton" />
+			</form>
+		</div>
 	</body>
 </html>

@@ -34,7 +34,7 @@
     		</form>
    		 </div>
    		 <div class="fichier">
-			<p> Veuillez importer vos fichiers : </br> <input type="file" name="fileToUpload"></p>
+			<p> Veuillez importer vos fichiers : </br> <input type="file" name="fileToUpload" accept=".pdf"></p>
 			<p><input type="submit" value="Importer" class="bouton" ></p>
 		</div>
 	</div>
