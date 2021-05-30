@@ -49,19 +49,6 @@ session_start();
 			</fieldset>
 			<fieldset>
 			 <legend>Informations sur le véhicule</legend>
-				  <label for="CG">Carte grise</label>
-				  <input name="CG" type="file"required=""><br>
-      			  <label for="CA">Contract d'assurance</label>
-      			  <input name="CA" type="file" required=""><br>
-				  <label for="CV">Carte verte</label>
-				  <input name="CV" type="file"required=""><br>
-      			  <label for="permis">Permis de conduire</label>
-      			  <input name="permis" type="file" required=""><br>
-      			  <label for="justificatif">Justificatif de domicile</label>
-      			  <input name="justificatif" type="file" required=""><br>
-			</fieldset>
-			<fieldset>
-			 <legend>Informations sur le véhicule</legend>
 				  <label for="A">Numéro d’immatriculation du véhicule (A)</label>
 				  <input name="A" type="text" required=""><br>
 				  <label for="E">Numéro d’nameentification du véhicule (E)</label>
@@ -78,6 +65,19 @@ session_start();
 				  <input name="D3" type="text" required=""><br>
 				  <label for="kilometre">Kilométrage inscrit au compteur du véhicule</label>
 				  <input name="kilometre" type="text" required=""><br>
+			</fieldset>
+			<fieldset>
+			 <legend>Informations sur le véhicule</legend>
+				  <label for="CG">Carte grise</label>
+				  <input name="CG" type="file"required=""><br>
+	  			  <label for="CA">Contrat d'assurance</label>
+	  			  <input name="CA" type="file" required=""><br>
+				  <label for="CV">Carte verte</label>
+				  <input name="CV" type="file"required=""><br>
+	  			  <label for="permis">Permis de conduire</label>
+	  			  <input name="permis" type="file" required=""><br>
+	  			  <label for="justificatif">Justificatif de domicile</label>
+	  			  <input name="justificatif" type="file" required=""><br>
 			</fieldset>
 			<input type="submit" value="ajouter" class="bouton">
 			<input type="reset" value="Réinitialiser" class="bouton">	
