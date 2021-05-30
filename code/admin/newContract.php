@@ -42,7 +42,8 @@
 				$donnes = array(date('d-m-y h:i:s'), "L'administrateur ".$_SESSION["nom"]." ".$_SESSION["prenom"]." a ajouté l'assurance ".$_POST["nomAssurance"]." avec comme gestionnaire ".$_POST["nom"]." ".$_POST["prenom"].".");
 				fputcsv($handle, $donnes, ',');
 				fclose($handle);
-			} 
+			}
+			mail($_POST["mail"], "Bienvenue sur Icar", "Votre mot de passe est le suivant : ".$mdp); 
 			header('Location: admin.php');
 		?>
 	</body>
