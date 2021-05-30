@@ -50,12 +50,11 @@
 			<input name="mail" placeholder="Entrez le mail" required=""><br>
 			<input type="submit" value="Ajouter" class="bouton">
 		</form>
-<<<<<<< HEAD
+
 	</fieldset>
+	
 	<fieldset>
-		<legend>Logs</legend>
-=======
-		<h1>Ajouter une nouvelle force de l'ordre :</h1>
+		<legend>Ajouter une nouvelle force de l'ordre :</legend>
 		<form action='newForce.php' method='POST'>
 			<label for="nom">Nom de la force de l'ordre :</label>
 			<input name="nom" placeholder="Entrez le nom" required=""><br>
@@ -65,8 +64,9 @@
 			<input name="mail" placeholder="Entrez le mail" required=""><br>
 			<input type="submit" value="Ajouter" class="bouton">
 		</form>
-		<h1>Logs</h1>
->>>>>>> d16a782914f6cbcdbb41ded7fa7b576c3c716e57
+	</fieldset>
+	<fieldset>
+		<legend>Logs</legend>
 		<div id = "logs">
 			<?php
 				$path = "../../database/logs.csv";
@@ -78,7 +78,7 @@
 				}
 			?>
 		</div>
-		</fieldset>
+	</fieldset>
 	</body>
 			<!-- bouton de déconnexion -->
 		<div class="deconnexion">
