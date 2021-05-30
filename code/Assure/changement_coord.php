@@ -1,9 +1,9 @@
 <?php
 	session_start();
-	$_SESSION["nom"] = "Hubert";
-	$_SESSION["prenom"] = "Lucas";
+	$_SESSION["nom"] = "Baucor";
+	$_SESSION["prenom"] = "Victor";
 	$_SESSION["assurance"] = "Allianz";
-	$_SESSION["rang"] = "client";
+	$_SESSION["rang"] = "assure";
 ?>
 <!DOCTYPE html>
 <html lang = "fr">

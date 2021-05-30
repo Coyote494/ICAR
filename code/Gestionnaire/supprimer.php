@@ -1,4 +1,7 @@
 <?php
+	
+	rrmdir($_POST['dir']);
+
 	function rrmdir($src) {
 		$dir = opendir($src);
 		while(false !== ( $file = readdir($dir)) ) {

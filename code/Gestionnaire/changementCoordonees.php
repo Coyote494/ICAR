@@ -7,18 +7,22 @@
 <html>
 	<head>
 		<title>Changement de coordonées</title>	
+			<link rel="stylesheet" type="text/css" href="./CSS/changementCoordonnees.css" />
+			<link rel="stylesheet"type="text/css"  href="./CSS/style.php"  />
 	</head>
 	<body>
-		<h1>Demandes De Changement de Coordonées :</h1>
+	<div class="bandeau">
+		<img src="../img/logo.png">
+		<h1>Demande de changement de coordonées</h1>
+	</div>
+	<div class="container">
 		<?php
-		
 		displayRequest();
 		
 		function formEcho($a, $i){
 			echo "<form action='confirm.php' method='POST'><br><input type='submit' name='ok' value='confirmer la demande ".$i."'><br></form><br>";
 			echo "<form action='cancel.php' method='POST'><br><input type='submit' name='notok' value='supprimer la demande ".$i."'><br></form><br>";
 		}
-
 		function displayRequest(){
 			$i = 1;
 			if ($new = fopen("../../database/".$_SESSION['assurance']."/demande_changement.csv", "a+")){
@@ -51,10 +55,14 @@
 		}
 		
 		?>
+<<<<<<< HEAD
 		
 			<!-- bouton de déconnexion -->
 	<form method="POST" action="../deconnexion.php">
 		<input type="submit" name="OUT" value="Déconnexion" class="bouton"/>
 	</form>
+=======
+	</div>
+>>>>>>> 5aa70c29c21c205d77f4793715ad29b560d77172
 	</body>
 </html>

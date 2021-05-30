@@ -21,9 +21,12 @@
 			}
 		?>
 	<div class="bandeau">
-		<img src="../img/logo1.png">
+		<img src="../img/logo.png">
     	<h1>Déclarer un sinistre</h1>
     </div>
+    <div class="voiture-rtl">
+    	<div><img src="./img/voiture.png"></div>
+	</div>
 		<div>
 			<div class="container">
 			<!-- formulaire d'upload de la déclaration de sinistre -->
@@ -33,7 +36,7 @@
 			<form enctype="multipart/form-data" method="post" action="./gestion_upload/lettre.php">
 				Veuillez selectionner des fichiers à importer
 				<p><input type="file" name="fileToUpload"></p>
-				<input type="submit" value="Importer">
+				<input type="submit" value="Importer" class="bouton">
 			</form>
 		</div>
 			<div class="constat">
@@ -48,7 +51,7 @@
 			
 			<form enctype="multipart/form-data" method="post" action="./gestion_upload/constat.php">
 				<p><input type="file" name="fileToUpload"></p>
-				<p><input type="submit" value="Importer"></p>
+				<p><input type="submit" value="Importer" class="bouton"></p>
 			</form>
 		</div>
 			<div class="images">
@@ -57,7 +60,7 @@
 			<form enctype="multipart/form-data" method="post" action="./gestion_upload/temoignages.php">
 				Veuillez selectionner des images à importer
 				<p><input type="file" name="fileToUpload"></p>
-				<p><input type="submit" value="Importer"></p>
+				<p><input type="submit" value="Importer" class="bouton"></p>
 			</form>
 		</div>
 
@@ -67,14 +70,14 @@
 			<form enctype="multipart/form-data" method="post" action="./gestion_upload/plainte.php">
 				Veuillez selectionner votre copie de dépôt
 				<p><input type="file" name="fileToUpload"></p>
-				<p><input type="submit" value="Importer"></p>
+				<p><input type="submit" value="Importer" class="bouton"></p>
 			</form>
 		</div>
 	</div>
 	<div class="deconnexion">
 		<!-- bouton de déconnexion -->
 		<form method="POST" action="../deconnexion.php">
-		    <input type="submit" name="OUT" value="Déconnexion"/>
+		    <input type="submit" name="OUT" value="Déconnexion" class="bouton" />
 		</form>
 	</div>
 	</body>
