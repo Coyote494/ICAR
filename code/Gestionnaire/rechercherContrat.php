@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -41,6 +45,10 @@
 				}
 			</script>
 		</div>
+		<!-- bouton de déconnexion -->
+		<form method="POST" action="../deconnexion.php">
+			<input type="submit" name="OUT" value="Déconnexion" class="bouton"/>
+		</form>
 	</body>
 </html>
 

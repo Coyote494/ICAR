@@ -1,25 +1,28 @@
 <?php
+session_start();
+
 $first = strtoupper(substr($nom,0,1));
 
-//strtolower partout??
 $nom = $_POST["nom"];
 $prenom = $_POST["prenom"];
 $tel = $_POST["tel"];
 $email = $_POST["email"];
 $numero = $_POST["numero"];
 
-$path = "../database/".$_SESSION['assurance']."/".$first."/".$nom."_".$prenom."/";
+$path = "../../database/".$_SESSION['assurance']."/".$first."/".$nom."_".$prenom."/";
 displayInfo($path);
 ScanDirectory($path."/Contrats");
 ScanDirectory($path."/Sinistres");
 ScanDirectory($path."/Documents");
+ScanDirectory($path."/Justificatifs");
 
 
 	function displayInfo($path){
-		$f = fopen($path."coordonnees.csv", "r");
-		$info = fgetcsv($f);
-		echo "<p>Nom: ".$info[0]."</p><br><p>Prénom: ".$info[1]."</p><br><p>Adresse: ".$info[4]."</p><br><p>Code Postal: ".$info[5]."</p><br><p>Ville: ".$info[6]."</p><br><p>Portable: ".$info[7]."</p><br><p>Email: ".$info[8]."</p><br>";
-		fclose($f);
+		if($f = fopen($path."coordonnees.csv", "r")){
+			$info = fgetcsv($f);
+			echo "<p>Nom: ".$info[0]."</p><br><p>Prénom: ".$info[1]."</p><br><p>Adresse: ".$info[4]."</p><br><p>Code Postal: ".$info[5]."</p><br><p>Ville: ".$info[6]."</p><br><p>Portable: ".$info[7]."</p><br><p>Email: ".$info[8]."</p><br>";
+			fclose($f);
+		}
 	}
 	
 	

@@ -17,8 +17,8 @@ writeNewCsv($dataKept, $path);
 				}else{
 					$nom = $ligne[1];
 					$prenom = $ligne[2];
-					//on remplace le fichier coordonnees.csv par le fichier temporaire lorsque la demande est confirmée.
-					rename("../../database/".$_SESSION['assurance']."/".strtoupper(substr($nom,0,1))."/".$nom."_".$prenom."/coordonnees_tmp.csv", "../../database/".$_SESSION['assurance']."/".strtoupper(substr($nom,0,1))."/".$nom."_".$prenom."/coordonnees.csv");
+					//on supprime le fichier coordonnees_tmp.csv lorsque la demande est refusée.
+					unlink("../../database/".$_SESSION['assurance']."/".strtoupper(substr($nom,0,1))."/".$nom."_".$prenom."/coordonnees_tmp.csv");
 				}
 				$i++;
 			}
