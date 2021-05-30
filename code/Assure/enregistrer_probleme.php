@@ -1,5 +1,9 @@
 <?php
 session_start();
+if (!isset($_SESSION["nom"])) {
+    header("Location: ../Accueil.php");
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -22,6 +26,9 @@ session_start();
 				fclose($handle);
 			} 
 		?>
+		<form method="POST" action="../deconnexion.php">
+		    <input type="submit" name="OUT" value="Déconnexion" class="bouton" />
+		</form>
 		<?php
 			header('Location: accueil_assure.php');
 		?>

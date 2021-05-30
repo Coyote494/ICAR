@@ -1,5 +1,9 @@
 <?php
 	session_start();
+	if (!isset($_SESSION["nom"])) {
+		header("Location: ../Accueil.php");
+		exit();
+	}
 ?>
 <!DOCTYPE html>
 <html lang = "fr">
@@ -31,5 +35,10 @@
 		?>
         <div id="test">Affichage informations utilisateur scanné</div> 
         <script type="text/javascript" src="./JS/messagerie.js"></script> 
+		
+			<!-- bouton de déconnexion -->
+		<form method="POST" action="../deconnexion.php">
+			<input type="submit" name="OUT" value="Déconnexion" class="bouton"/>
+		 </form>
 	</body>
 </html>

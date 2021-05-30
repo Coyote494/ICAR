@@ -1,6 +1,5 @@
 <?php
 	session_start();
-	$_SESSION['assurance'] = 'Allianz'
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +19,7 @@
         <div><img src="img/voiture.png"></div>
     </div>
 
-		<fieldset><
+		<fieldset>
 		<?php
 		displayRequest();
 		
@@ -61,7 +60,6 @@
 		
 		?>
 	</fieldset>
-		
 			<!-- bouton de déconnexion -->
 	<form method="POST" action="../deconnexion.php">
 		<input type="submit" name="OUT" value="Déconnexion" class="bouton"/>

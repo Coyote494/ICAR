@@ -1,5 +1,9 @@
 <?php
-	session_start();
+session_start();
+if (!isset($_SESSION["nom"])) {
+    header("Location: ../Accueil.php");
+    exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang = "fr">
@@ -40,5 +44,8 @@
 		<script type="text/javascript" src="./JS/messagerie.js"></script>
 		<!-- <script type="text/javascript" src="./JS/accueil_assure.js"></script> -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<form method="POST" action="../deconnexion.php">
+		    <input type="submit" name="OUT" value="Déconnexion" class="bouton" />
+		</form>
 	</body>
 </html>

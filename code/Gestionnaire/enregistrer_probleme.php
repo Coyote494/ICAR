@@ -1,5 +1,9 @@
 <?php
 session_start();
+if (!isset($_SESSION["nom"])) {
+    header("Location: ../Accueil.php");
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -21,9 +25,12 @@ session_start();
 				fputcsv($handle, $donnes, ',');
 				fclose($handle);
 			} 
-		?>
-		<?php
-			header('Location: gestionnaire.php');
-		?>
+		?>			<!-- bouton de déconnexion -->
+	<form method="POST" action="../deconnexion.php">
+		<input type="submit" name="OUT" value="Déconnexion" class="bouton"/>
+	</form>
+	<?php
+		header('Location: gestionnaire.php');
+	?>
 	</body>
 </html>

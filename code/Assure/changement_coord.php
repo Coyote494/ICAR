@@ -1,9 +1,9 @@
 <?php
-	session_start();
-	$_SESSION["nom"] = "Baucor";
-	$_SESSION["prenom"] = "Victor";
-	$_SESSION["assurance"] = "Allianz";
-	$_SESSION["rang"] = "assure";
+session_start();
+if (!isset($_SESSION["nom"])) {
+    header("Location: ../Accueil.php");
+    exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang = "fr">

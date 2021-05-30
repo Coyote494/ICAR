@@ -1,5 +1,9 @@
 <?php
 session_start();
+if (!isset($_SESSION["nom"])) {
+    header("Location: ../Accueil.php");
+    exit();
+}
 
 $nom = $_POST["nom"];
 $prenom = $_POST["prenom"];
