@@ -32,6 +32,12 @@
 			        $_FILES['fileToUpload']['tmp_name'], 
 			        $path."/lettre.".$extension[$n-1]);
 			  	if($res){
+			  		if (($handle = fopen("../../../database/logs.csv", "a"))) {	
+			    		date_default_timezone_set('Europe/Paris');
+						$donnes = array(date('d-m-y h:i:s'), "L'assuré ".$_SESSION["nom"]." ".$_SESSION["prenom"]." a déclaré un sinistre.");
+						fputcsv($handle, $donnes, ',');
+						fclose($handle);
+					}
                     header('Location: ../declarer_sinistre.php?upload=sucess');
 			  		exit();
 			  	}else{

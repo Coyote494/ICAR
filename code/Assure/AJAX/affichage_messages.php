@@ -12,8 +12,8 @@
 			$path = "../../../database/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/";
 			if (($handle = fopen($path."discussion.csv", "r"))) {
 				while (($data = fgetcsv($handle, 1000, ","))) {
-					if($data[0] == "client"){
-						echo "<div class = 'asssure'>".$data[1]."</div>";
+					if($data[0] == "assure"){
+						echo "<div class = 'assure'>".$data[1]."</div>";
 					}else{
 						echo "<div class = 'gestionnaire'>".$data[1]."</div>";
 					}

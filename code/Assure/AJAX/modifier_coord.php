@@ -86,6 +86,12 @@
 							}
 					echo "</table>";
 					echo '<button type = "button" onclick="modifier_perso()">Modifier</button>';
+					if (($handle = fopen("../../../database/logs.csv", "a"))) {	
+			    		date_default_timezone_set('Europe/Paris');
+						$donnes = array(date('d-m-y h:i:s'), "L'assuré ".$_SESSION["nom"]." ".$_SESSION["prenom"]." a déclaré un changement de coordonnées.");
+						fputcsv($handle, $donnes, ',');
+						fclose($handle);
+					}
                     header('Location: ../changement_coord.php?upload=sucess');
 			  		exit();
 			  	}else{

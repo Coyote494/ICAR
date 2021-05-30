@@ -62,7 +62,7 @@
 		</form>
 	</div>
         <div id="messagerie">
-        	<img src="./img/discussion.png" onclick="afficher_messagerie()" width="50px" height="30px">
+        	<a href="messagerie.php">Accès messagerie</a>
         </div>
         <script type="text/javascript" src="./JS/accueil_assure.js"></script>
         <!-- <iframe src="messagerie.php" width="300" height="400"></iframe> -->
