@@ -50,9 +50,18 @@
 			<input name="mail" placeholder="Entrez le mail" required=""><br>
 			<input type="submit" value="Ajouter" class="bouton">
 		</form>
+<<<<<<< HEAD
+=======
+
+>>>>>>> b8501e229e594f6634f21148b2cde35ddf5f74ba
 	</fieldset>
+	
 	<fieldset>
+<<<<<<< HEAD
 		<legend><strong>Ajouter une nouvelle force de l'ordre </strong></legend>
+=======
+		<legend>Ajouter une nouvelle force de l'ordre :</legend>
+>>>>>>> b8501e229e594f6634f21148b2cde35ddf5f74ba
 		<form action='newForce.php' method='POST'>
 			<label for="nom">Nom de la force de l'ordre :</label>
 			<input name="nom" placeholder="Entrez le nom" required=""><br>
@@ -63,8 +72,25 @@
 			<input type="submit" value="Ajouter" class="bouton">
 		</form>
 	</fieldset>
+<<<<<<< HEAD
 		<h1>Logs</h1>
 		<iframe src="logs.php" width="1200" height="400"></iframe>
+=======
+	<fieldset>
+		<legend>Logs</legend>
+		<div id = "logs">
+			<?php
+				$path = "../../database/logs.csv";
+				if (($handle = fopen($path, 'r'))) {
+					while($data = fgetcsv($handle, 1000, ",")){
+						echo "<p>[".$data[0]."] ".$data[1]."</p>";
+					}
+					fclose($handle);
+				}
+			?>
+		</div>
+	</fieldset>
+>>>>>>> b8501e229e594f6634f21148b2cde35ddf5f74ba
 	</body>
 			<!-- bouton de déconnexion -->
 		<div class="deconnexion">
