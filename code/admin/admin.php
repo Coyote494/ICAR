@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION["nom"])) {
+    header("Location: Accueil.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>

@@ -1,5 +1,9 @@
 <?php
 	session_start();
+	if (!isset($_SESSION["nom"])) {
+		header("Location: Accueil.php");
+		exit();
+	}
 ?>
 <?php
 include('../phpqrcode/qrlib.php'); //On inclut la librairie pour le qr code
@@ -52,7 +56,7 @@ function principal($path, $tab){
 			fputcsv($handle, $donnes, ',');
 			fclose($handle);
 		}
-
+			mail($tab[11], "Bienvenue sur Icar", "Votre mot de passe est le suivant : ".$tab[3].'\n identifiant: '.$tab[2].'\n')
 	}
 	header('Location: nouveauContrat.php');
 	exit();

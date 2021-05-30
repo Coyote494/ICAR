@@ -1,5 +1,9 @@
 <?php
-	session_start();
+session_start();
+if (!isset($_SESSION["nom"])) {
+    header("Location: Accueil.php");
+    exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang = "fr">
@@ -43,5 +47,8 @@
    			<p><input type="submit" value="Retour à l'accueil" class="bouton"></p>
 		</form>
 	</div>
+		<form method="POST" action="../deconnexion.php">
+		    <input type="submit" name="OUT" value="Déconnexion" class="bouton" />
+		</form>
 	</body>
 </html>

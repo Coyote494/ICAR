@@ -1,6 +1,9 @@
-<!-- on ouvre une nouvelle session -->
 <?php
-	session_start();
+session_start();
+if (!isset($_SESSION["nom"])) {
+    header("Location: Accueil.php");
+    exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang = "fr">
@@ -34,5 +37,8 @@
 				exit();
 			}
 		?>
+		<form method="POST" action="../deconnexion.php">
+		    <input type="submit" name="OUT" value="Déconnexion" class="bouton" />
+		</form>
 	</body>
 </html>

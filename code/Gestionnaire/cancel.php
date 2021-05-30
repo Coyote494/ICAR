@@ -6,6 +6,8 @@ $line = (int)$tab[3];
 $path = "../../database/".$_SESSION['assurance']."/demande_changement.csv";
 $dataKept = delLine($path, $line);
 writeNewCsv($dataKept, $path);
+header('Location: changementCoordonees.php');
+exit();
 
 	function delLine($path, $line){
 		if($f = fopen($path, "r")){
