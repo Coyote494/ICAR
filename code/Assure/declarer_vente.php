@@ -29,18 +29,20 @@
 	</div>
 	<div class="container">
 		<div class="certificat">
-			<p>Voici un exemple vierge de certificat de cession : <a href="./documents_administratifs/cerfa_cession.pdf" target = "_blank">Déclaration_de_vente.pdf</a></p>
+			<p>Voici un exemple vierge de certificat de cession :</br> <a href="./documents_administratifs/cerfa_cession.pdf" target = "_blank">Déclaration_de_vente.pdf</a></p>
     		<form enctype="multipart/form-data" method="post" action="./gestion_upload/cession.php">
     		</form>
    		 </div>
    		 <div class="fichier">
-			<p> Veuillez importer vos fichiers : <input type="file" name="fileToUpload"></p>
+			<p> Veuillez importer vos fichiers : </br> <input type="file" name="fileToUpload"></p>
 			<p><input type="submit" value="Importer" class="bouton" ></p>
 		</div>
 	</div>
+	<div class="deconnexion">
 	<!-- bouton de déconnexion -->
 	<form method="POST" action="../deconnexion.php">
 		<input type="submit" name="OUT" value="Déconnexion" class="bouton"/>
 	</form>
+</div>
 	</body>
 </html>

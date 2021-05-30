@@ -17,7 +17,7 @@ img{
   padding: 70px;
 }
 
-.declarer_sinistre, .historique_sinistres, .changement_coord , .declarer_vente{
+.declarer_sinistre, .contrats, .historique_sinistres, .changement_coord , .declarer_vente{
   border:solid;
   border-radius: 8px;
   border-color: #2e7d32;
@@ -46,3 +46,7 @@ a.lien{
     padding: 10px 20px;
     border-radius: 5px;
 }
+#deconnexion{
+  text-align: center,
+  padding: 20px;
+ }

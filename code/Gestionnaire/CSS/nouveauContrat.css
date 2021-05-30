@@ -9,18 +9,57 @@ img{
 	height: 60px;
 }
 
-.formulaire{
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	border: solid;
-	border-radius: 8px;
-	border-color: #2e7d32;
-	font-family: 'Noto Sans JP', sans-serif;
-	padding: 20px;
-	margin-left:35%;
-	margin-right:35%;
+
+fieldset {
+  margin-bottom: 15px;
+  padding: 10px;
+  text-align: center;
 }
+ 
+legend {
+  padding: 0px 3px;
+  font-weight: bold;
+  font-variant: small-caps;
+}
+ 
+label {
+  width: 110px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 6px;
+}
+
+em {
+  font-weight: bold;
+  font-style: normal;
+  color: #f00;
+}
+
+input:focus {
+  background: #eaeaea;
+}
+ 
+input, textarea {
+  width: 249px;
+}
+ 
+textarea {
+  height: 100px;
+}
+ 
+select {
+  width: 254px;
+}
+ 
+input[type=checkbox] {
+  width: 10px;
+}
+ 
+input[type=submit] {
+  width: 150px;
+  padding: 10px;
+}
+
 
 .bouton{
 	background-color: #2e7d32;
@@ -37,8 +76,7 @@ img{
 
 
 .voiture-rtl img{​​​​​​​
-  width: 100%;
-  height: 100%; 
+  height: 60px; 
 }
 
 

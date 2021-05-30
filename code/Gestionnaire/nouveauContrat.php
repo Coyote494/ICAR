@@ -18,51 +18,70 @@ session_start();
         <div><img src="img/voiture.png"></div>
     </div>
 
-    <div class="formulaire">
 		<form enctype="multipart/form-data" action="creationCompte.php" method="POST" class="">
-			<table>
-				<tr><td colspan="2"><strong>Informations assuré</strong></td></tr>
-				<tr><td>Genre :</td>
-				<td><select name="genre" required>
+			<fieldset>
+			 <legend>Informations personnelles</legend>
+				Genre :
+				<select name="genre" required>
 					<option>M.</option>
 					<option>Mme</option>
-				</select></td></tr>
-				<tr><td>Nom :<input type="text" name="nom" required></tr></td>
-				<tr><td>Prénom :<input type="text" name="prenom" required></tr></td>
-				<tr><td>Date De Naissance : <input type="date" name="dob" required></tr></td>
-				<tr><td>Profession : <input type="text" name="job" required></tr></td>
-				<tr><td>Adresse : <input type="text" name="adresse" required></tr></td>
-				<tr><td>Code Postal : <input type="text" name="codePostal" required></tr></td>
-				<tr><td>Ville : <input type="text" name="ville" required></tr></td>
-				<tr><td>Numéro Portable : <input type="number" name="numero" required></tr></td>
-				<tr><td>Adresse Mail : <input type="email" name="mail" required></tr></td>
-				<tr><td>Numéro de contrat : <input type="number" name="numContrat" required></tr></td>
-				<tr><td>Carte grise :<br><input type="file" name="CG" required></tr></td>
-				<tr><td>Contrat d'assurance :<br><input type="file" name="CA" required></tr></td>
-				<tr><td>Carte verte :<br><input type="file" name="CV" required></tr></td>
-				<tr><td>Permis de conduire :<br><input type="file" name="permis" required></tr></td>
-				<tr><td>Justificatif de domicile :<br><input type="file" name="justificatif" required></tr></td>
-				
-				<tr><td colspan="2"><strong>Informations sur le véhicule</strong></td></tr>
-				<tr><td>Numéro d’immatriculation du véhicule (A) : </td><td><input type="text" name="A" required></td></tr>
-				
-				<tr><td>Numéro d’identification du véhicule (E) : </td><td><input type="text" name="E" required></td></tr>
-				
-				<tr><td>Date de 1re immatriculation du véhicule <br>(JJ/MM/AAAA) (B) :</td><td><input type="date" name="date_first_immat" required></td></tr>
-				
-				<tr><td>Marque (D.1) :  </td><td><input type="text" name="D1" required></td></tr>
-				
-				<tr><td>Type, variante, version (D.2) : </td><td><input type="text" name="D2" required></td></tr>
-				
-				<tr><td>Genre national (J.1) : </td><td><input type="text" name="J1" required></td></tr>
-				
-				<tr><td>Dénomination commerciale (D.3) : </td><td><input type="text" name="D3" required></td></tr>
-				
-				<tr><td>Kilométrage inscrit au compteur du véhicule : </td><td><input type="text" name="kilometre" required></td></tr>
-  			</table>
+				</select></br>
+				  <label for="nom">Nom</label>
+				  <input id="nom" placeholder="Entrez votre nom" required=""><br>
+      			  <label for="Prenom">Prenom</label>
+      			  <input id="prenom" placeholder="Entrez votre prenom" required=""><br>
+     			  <label for="Date">Date de naissance</label>
+        		  <input id="Date" type="date" required=""><br>
+      			  <label for="profession">Profession</label>
+                  <input id="profession" placeholder="Entrez votre profession" required=""><br>
+     			  <label for="Adresse">Adresse</label>
+        		  <input id="adresse" placeholder="Entrez votre adresse" required=""><br>
+     			  <label for="code">Code postal</label>
+        		  <input id="nom" placeholder="Code postal" required=""><br>
+     			  <label for="ville">Ville</label>
+     			  <input id="nom" placeholder="Ville" required=""><br>
+     			  <label for="tel">Numéro de téléphone portable</label>
+     			  <input id="tel" placeholder="ex :06********" type="tel" required="" pattern="06[0-9]{8}"><br>
+     			  <label for="mail">Adresse mail</label>
+     			  <input id="mail" placeholder="Mail" required="" pattern="[a-zA-Z]*.[a-zA-Z]*@polytechnique.edu"><br>
+     			  <label for="contrat">Numero de contract</label>
+     			  <input id="contrat" placeholder="Numéro de contract" required=""><br>
+			</fieldset>
+			<fieldset>
+			 <legend>Informations sur le véhicule</legend>
+				  <label for="cg">Carte grise</label>
+				  <input id="cg" type="file"required=""><br>
+      			  <label for="CA">Contract d'assurance</label>
+      			  <input id="CA" type="file" required=""><br>
+				  <label for="cv">Carte verte</label>
+				  <input id="cv" type="file"required=""><br>
+      			  <label for="permis">Permis de conduire</label>
+      			  <input id="permis" type="file" required=""><br>
+      			  <label for="jd">Justificatif de domicile</label>
+      			  <input id="jd" type="file" required=""><br>
+			</fieldset>
+			<fieldset>
+			 <legend>Informations sur le véhicule</legend>
+				  <label for="nom">Numéro d’immatriculation du véhicule (A)</label>
+				  <input id="nom" type="text" required=""><br>
+				  <label for="nom">Numéro d’identification du véhicule (E)</label>
+				  <input id="nom" type="text" required=""><br>
+				  <label for="nom">Date de 1re immatriculation du véhicule (B)</label>
+				  <input id="nom" type="text" required=""><br>
+				  <label for="nom">Marque (D.1)</label>
+				  <input id="nom" type="text" required=""><br>
+				  <label for="nom">Type, variante, version (D.2)</label>
+				  <input id="nom" type="text" required=""><br>
+				  <label for="nom">Genre national (J.1</label>
+				  <input id="nom" type="text" required=""><br>
+				  <label for="nom">Dénomination commerciale (D.3)</label>
+				  <input id="nom" type="text" required=""><br>
+				  <label for="nom">Kilométrage inscrit au compteur du véhicule</label>
+				  <input id="nom" type="text" required=""><br>
+			</fieldset>
 			<input type="submit" value="ajouter" class="bouton">
 			<input type="reset" value="Réinitialiser" class="bouton">	
-		</form>
+			</form>
 	</div>
 		<!-- bouton de déconnexion -->
 	<form method="POST" action="../deconnexion.php">

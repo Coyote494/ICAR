@@ -16,8 +16,6 @@ height: 60px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
-	border-radius: 5px;
-	border:solid black;
 	padding: 50px;
 }
 
@@ -36,7 +34,7 @@ height: 60px;
 	margin-right: 2%;
 	background-color: #fafafa;
 	font-family: 'Noto Sans JP', sans-serif;
-	padding: 5px;
+	padding: 50px;
 }
 
 
@@ -76,4 +74,9 @@ height: 60px;
     -webkit-transform: translate(-100%);
     transform: translate(-100%);
   }
+}
+
+.deconnexion{
+  text-align: center;
+  padding: 20px;
 }

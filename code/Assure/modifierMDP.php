@@ -13,6 +13,9 @@
 		<img src="../img/logo.png">
 		<h1>Modifier votre mot de passe</h1>
 	</div>
+	<div class="voiture-rtl">
+    	<div><img src="./img/voiture.png"></div>
+	</div>
 
 	<div class="container">
 		<form method="post" action="./mdp.php">

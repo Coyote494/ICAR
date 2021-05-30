@@ -28,11 +28,7 @@
         <div class="declarer_vente">
         	<a href='declarer_vente.php' class='lien'>Déclaration de vente/cession</a></div>
     	</div>
-    <!-- bouton de déconnexion -->
-		<form method="POST" action="../deconnexion.php">
-		    <input type="submit" name="OUT" value="Déconnexion" class="bouton" />
-		</form>
-		<div id = contrats>
+    <div id = contrats>
 		<?php
 			$Directory = "../../database/".$_SESSION["assurance"]."/".$_SESSION["nom"][0]."/".$_SESSION["nom"]."_".$_SESSION["prenom"]."/Contrats";
 			$MyDirectory = opendir($Directory) or die('Erreur');
@@ -59,7 +55,12 @@
             	echo "<script>alert('Mot de passe modifié avec succès !');</script>" ;
 			}   
 		?>
-
+    <!-- bouton de déconnexion -->
+    <div id="deconnexion">
+		<form method="POST" action="../deconnexion.php">
+		    <input type="submit" name="OUT" value="Déconnexion" class="bouton" />
+		</form>
+	</div>
         <div id="messagerie">
         	<img src="./img/discussion.png" onclick="afficher_messagerie()" width="50px" height="30px">
         </div>

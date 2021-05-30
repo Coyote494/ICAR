@@ -27,6 +27,9 @@
 		<img src="../img/logo.png">
         <h2>Déclarer un changement de coordonnées</h2>
     </div>
+    <div class="voiture-rtl">
+    	<div><img src="./img/voiture.png"></div>
+	</div>
     	<div class="container">
     		<div id="infos">
 			<h3>Mes informations de connexion</h3>
@@ -85,8 +88,10 @@
 
 		<script type="text/javascript" src="./JS/modifier_perso.js"></script>
 		<!-- bouton de déconnexion -->
+		<div class="center">
 		<form method="POST" action="../deconnexion.php">
-			<input type="submit" name="OUT" value="Déconnexion"/>
+			<input type="submit" name="OUT" value="Déconnexion" class="bouton" />
 		</form>
+	</div>
 	</body>
 </html>
