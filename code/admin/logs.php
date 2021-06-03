@@ -26,8 +26,5 @@ if (!isset($_SESSION["nom"])) {
 		</div>
 		<script type="text/javascript" src="./JS/admin.js"></script>
 			<!-- bouton de déconnexion -->
-	<form method="POST" action="../deconnexion.php">
-		<input type="submit" name="OUT" value="Déconnexion" class="bouton"/>
-	</form>
 	</body>
 </html>

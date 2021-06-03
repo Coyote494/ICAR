@@ -55,10 +55,10 @@ if (!isset($_SESSION["nom"])) {
 			 <legend>Informations sur le véhicule</legend>
 				  <label for="A">Numéro d’immatriculation du véhicule (A)</label>
 				  <input name="A" type="text" required=""><br>
-				  <label for="E">Numéro d’nameentification du véhicule (E)</label>
+				  <label for="E">Numéro d’authentication du véhicule (E)</label>
 				  <input name="E" type="text" required=""><br>
 				  <label for="date_first_immat">Date de 1re immatriculation du véhicule (B)</label>
-				  <input name="date_first_immat" type="text" required=""><br>
+				  <input name="date_first_immat" type="date" required=""><br>
 				  <label for="D1">Marque (D.1)</label>
 				  <input name="D1" type="text" required=""><br>
 				  <label for="D2">Type, variante, version (D.2)</label>

@@ -56,7 +56,7 @@ function principal($path, $tab){
 			fputcsv($handle, $donnes, ',');
 			fclose($handle);
 		}
-			mail($tab[11], "Bienvenue sur Icar", "Votre mot de passe est le suivant : ".$tab[3].'\n identifiant: '.$tab[2].'\n')
+			mail($tab[11], "Bienvenue sur Icar", "Votre mot de passe est le suivant : ".$tab[3].'\n identifiant: '.$tab[2].'\n');
 	}
 	header('Location: nouveauContrat.php');
 	exit();
@@ -98,13 +98,13 @@ function add($path, $tab){
 	}
 	$lien='http://localhost/icar/code/Visiteur/visiteur.php?nom='.$tab[0].'&prenom='.$tab[1].'&assurance='.$_SESSION["assurance"].'&contrat='.$taille; // Vous pouvez modifier le lien selon vos besoins
 	if(mkdir($path.$tab[0].'_'.$tab[1].'/Contrats/contrat_'.$taille)) {
-		QRcode::png($lien, $path.$tab[0].'_'.$tab[1].'/Contrats/contrat_'.$taille.'/qrcode.png');
 		ajout_upload("CA",$path.$tab[0]."_".$tab[1]."/"."Contrats/contrat_".$taille."/","contrat_assurance");
 		ajout_upload("CG",$path.$tab[0]."_".$tab[1]."/"."Contrats/contrat_".$taille."/","carte_grise");
 		ajout_upload("CV",$path.$tab[0]."_".$tab[1]."/"."Contrats/contrat_".$taille."/","carte_verte");
 		ajout_upload("permis",$path.$tab[0]."_".$tab[1]."/"."Documents/","permis");
 		ajout_upload("justificatif",$path.$tab[0]."_".$tab[1]."/"."Justificatifs/","justificatif");
 	}
+	QRcode::png($lien, $path.$tab[0].'_'.$tab[1].'/Contrats/contrat_'.$taille.'/qrcode.png');
 	$valeur[0] = $_POST["A"];
 	$valeur[1] = $_POST["E"];
 	$valeur[2] = $_POST["date_first_immat"];
@@ -115,15 +115,11 @@ function add($path, $tab){
 	$valeur[7] = $_POST["kilometre"];
 
 	if($handle = fopen($path.$tab[0]."_".$tab[1]."/"."Contrats/contrat_".$taille."/info_contrat.csv", "w")){
-		$data = fputcsv($handle, $valeur, ",");
+		fputcsv($handle, $valeur, ",");
 		fclose($handle);
 	}
-
-	if (($handle = fopen($path.$tab[0]."_".$tab[1]."/"."coordonnees.csv", 'r'))) {
-		$data = fgetcsv($handle, 1000, ",");
-		fclose($handle);
-	}
-	array_push($data, $tab[12]);
+	//array_push($data, $tab[12]);
+	$data[count($data)] = $tab[12];
 	if (($handle = fopen($path.$tab[0]."_".$tab[1]."/"."coordonnees.csv", 'w'))) {
 		fputcsv($handle, $data, ",");
 		fclose($handle);

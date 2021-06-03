@@ -9,9 +9,9 @@ principal();
 
 	function principal(){
 		rrmdir($_POST['dir']);
-		$tab = explode($_POST['dir'], '_')
+		$tab = explode($_POST['dir'], '_');
 		LOGS($tab);
-		header('Location: supprimerContrat.php';
+		header('Location: supprimerContrat.php');
 		exit();
 	}
 	

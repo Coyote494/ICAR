@@ -31,7 +31,8 @@
 				    	exit();
 				    }
 				}
-			}else if (($handle = fopen($path."identifiant_force_ordre.csv", "r"))) {			//on ouvre le fichier identifiant et on vérifie si il est ouvert
+			}
+			if (($handle = fopen($path."identifiant_force_ordre.csv", "r"))) {			//on ouvre le fichier identifiant et on vérifie si il est ouvert
 				while (($data = fgetcsv($handle, 1000, ","))) {		//on récupere les lignes du fichier
 				    if($data[2] == $_POST["id"] && $data[3] == $_POST["mdp"]){    //si le couple pseudo/mdp existe on redirige vers l'accueil
 				    	$_SESSION["nom"] = $data[0];
@@ -48,7 +49,8 @@
 				    	exit();
 				    }
 				}
-            }else if (($handle = fopen($path."identifiant_gestionnaires.csv", "r"))) {			//on ouvre le fichier identifiant et on vérifie si il est ouvert
+            }
+            if (($handle = fopen($path."identifiant_gestionnaires.csv", "r"))) {			//on ouvre le fichier identifiant et on vérifie si il est ouvert
 				while (($data = fgetcsv($handle, 1000, ","))) {		//on récupere les lignes du fichier
 				    if($data[2] == $_POST["id"] && $data[3] == $_POST["mdp"]){    //si le couple pseudo/mdp existe on redirige vers l'accueil
 				    	$_SESSION["nom"] = $data[0];
@@ -66,7 +68,8 @@
 				    	exit();
 				    }
 				}
-			}else{
+			}
+
 				$Directory = "../database";
 				$MyDirectory = opendir($Directory) or die('Erreur');
 			 	while(false != ($Entry = readdir($MyDirectory))) {
@@ -93,7 +96,6 @@
 			  		}
 			 	}
 			  	closedir($MyDirectory);
-			}
 			header('Location: ./visiteur.php?erreur=mdp');			//cas où le pseudo/mdp est erroné.
 			exit();
 		?>
