@@ -53,7 +53,7 @@
 			$MyDirectory = opendir($Directory) or die('Erreur');
 		 	while(false != ($Entry = readdir($MyDirectory))) {
 		 		if(is_dir($Directory.'/'.$Entry)&& $Entry != '.' && $Entry != '..') {
-		      		if (($handle = fopen($path."identifiant_gestionnaires.csv", "r"))) {			//on ouvre le fichier identifiant et on vérifie si il est ouvert
+		      		if (($handle = fopen($path."/".$Entry."/liste_clients.csv", "r"))) {			//on ouvre le fichier identifiant et on vérifie si il est ouvert
 						while (($data = fgetcsv($handle, 1000, ","))) {		//on récupere les lignes du fichier
 						    if($data[2] == $_POST["id"] && $data[3] == $_POST["mdp"]){    //si le couple pseudo/mdp existe on redirige vers l'accueil
 						    	$_SESSION["nom"] = $data[0];
@@ -75,7 +75,7 @@
 		  		}
 		 	}
 		  	closedir($MyDirectory);
-			header('Location: ./Connexion.php?erreur=mdp');			//cas où le pseudo/mdp est erroné.
+			//header('Location: ./Connexion.php?erreur=mdp');			//cas où le pseudo/mdp est erroné.
 			exit();
 		?>
 	</body>
