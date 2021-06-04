@@ -12,7 +12,7 @@
 	<body>
 	<div class="bandeau"> 
 		<img src="../img/logo.png">
-        <h2>Bienvenue sur votre page administrateur</h2>
+        <h2>Bienvenue sur votre page Gestionnaire</h2>
     </div>
 
     <div class="voiture-rtl">
